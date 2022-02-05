@@ -9,9 +9,9 @@ Substring matching with applications to genomics/proteomics.
 
 <a href="https://github.com/avinashk442/String-matching-algorithms-and-applications">https://github.com/avinashk442/String-matching-algorithms-and-applications</a>
 
-## Useful links and resources:
-https://en.wikipedia.org/wiki/Amdahl%27s_law
-https://ftp.ncbi.nih.gov/genbank/
+## Other useful links and resources:
+* https://en.wikipedia.org/wiki/Amdahl%27s_law
+* https://ftp.ncbi.nih.gov/genbank/
 
 
 
