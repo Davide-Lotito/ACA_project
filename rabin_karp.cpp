@@ -78,31 +78,17 @@ void search(char pat[], char txt[], int q)
 // Driver program to test above function
 int main(int argc, char *argv[])
 {
-    string txt = read_file( argv[1] );
-
     int q = 101; // A prime number
-    
-    std::ifstream file;
-
-    int PATSIZE = 1000;
-    char pat[PATSIZE];
-
-    file.open(argv[2]);
-    while(file.getline(pat,PATSIZE-1))
-    {
+    string txt = read_file( argv[1] );
+    string pat = read_file( argv[2] );
 
     clock_t begin = clock();
 
-
-    search(pat, (char*)txt.c_str(), q);
+    search((char*)pat.c_str(), (char*)txt.c_str(), q);
     clock_t end = clock();
     double elapsed_secs = double(end - begin)*1000 / CLOCKS_PER_SEC;
 
-
     cout<<"Number of matches of \""<<pat<<"\" is "<<cou<<endl<<"Time taken:"<<elapsed_secs<<endl;
-    cou=0;
-    }
-   file.close();
     
     return 0;
 }
