@@ -1,5 +1,5 @@
 # ACA_project
-Substring matching with application to genomics/proteomics.
+Substring matching with applications to genomics/proteomics.
 
 
 ## The test-data was taken from here:
@@ -8,5 +8,10 @@ Substring matching with application to genomics/proteomics.
 ## The implementation of Rabin Karp was taken from this repo:
 
 <a href="https://github.com/avinashk442/String-matching-algorithms-and-applications">https://github.com/avinashk442/String-matching-algorithms-and-applications</a>
+
+## Useful links and resources:
+https://en.wikipedia.org/wiki/Amdahl%27s_law
+https://ftp.ncbi.nih.gov/genbank/
+
 
 
