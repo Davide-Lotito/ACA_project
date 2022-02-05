@@ -3,6 +3,6 @@
 cd ./data/
 python3 remove_nl.py genome.fna 
 cd ..
-g++ rabin_karp.cpp
+g++ -std=c++11 rabin_karp.cpp
 ./a.out ./data/genome_no_new_lines.txt ./data/pat.txt
 
