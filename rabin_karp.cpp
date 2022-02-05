@@ -5,22 +5,11 @@
 
 using namespace std;
 
+#include "read_file.h"
 
 
 int cou=0; 
-
 #define d 256
-
-
-
-string read_file(string pathname){
-    std::ifstream t(pathname);
-    std::stringstream buffer;
-    buffer << t.rdbuf();
-    return buffer.str();
-}
-
-
 
  
 /* pat -> pattern
@@ -83,109 +72,24 @@ void search(char pat[], char txt[], int q)
         }
     }
 }
- 
-// // Driver program to test above function
-// int main()
-// {
-//     char txt[20000];
-//     int q = 101; // A prime number
-    
-//     //scanf("%s",&txt);
-//     std::ifstream file;
-//     file.open("inputtext.txt");
-//     //file>>txt;
-//     file.getline(txt,19999);
-//     file.close();
-
-
-//     //printf("100%s100\n",txt );
-//     //char *pat = "ABABAAABAB";
-//     //char *pat ="learning";
-//     char pat[30];
-
-//     file.open("pat.txt");
-//     while(file.getline(pat,29))
-//     {
-
-
-//     clock_t begin = clock();
-
-
-//     search(pat, txt, q);
-//     clock_t end = clock();
-//     double elapsed_secs = double(end - begin)*1000 / CLOCKS_PER_SEC;
-
-
-//     //cout<<txt<<endl;
-//     cout<<"Number of matches of \""<<pat<<"\" is "<<cou<<endl<<"Time taken:"<<elapsed_secs<<endl;
-//     cou=0;
-//     }
-//    file.close();
-
-    
-//     return 0;
-// }
-
-
-// int main(int argc, char *argv[]){
-
-
-//     clock_t begin = clock();
-
-
-//     // int q = 101;
-//     int q = 6700417;
-
-//     string txt = read_file(argv[1]);
-//     string pat = read_file(argv[2]);
-//     //cout << txt << "\n" << pat;
-
-//     char* pat_c_str =  (char*)pat.c_str();
-//     char* txt_c_str =  (char*)txt.c_str();
-
-//     cout << pat_c_str << "\n" << txt_c_str << "\n";
-
-//     search(pat_c_str, txt_c_str, q);
-
-//     cout << "found: " << cou << "\n";
-
-//     clock_t end = clock();
-//     double elapsed_secs = double(end - begin)*1000 / CLOCKS_PER_SEC;
-//     cout << "elapsed seconds" << elapsed_secs << "\n";
-
-// }
 
 
 
-
- 
 // Driver program to test above function
 int main(int argc, char *argv[])
 {
-    // char txt[20000];
     string txt = read_file( argv[1] );
 
     int q = 101; // A prime number
     
-    //scanf("%s",&txt);
     std::ifstream file;
-    // file.open("inputtext.txt");
-    //file>>txt;
-    // file.getline(txt,19999);
-    // file.close();
 
-
-    //printf("100%s100\n",txt );
-    //char *pat = "ABABAAABAB";
-    //char *pat ="learning";
-    // char pat[30];
     int PATSIZE = 1000;
     char pat[PATSIZE];
 
     file.open(argv[2]);
     while(file.getline(pat,PATSIZE-1))
     {
-
 
     clock_t begin = clock();
 
@@ -195,12 +99,10 @@ int main(int argc, char *argv[])
     double elapsed_secs = double(end - begin)*1000 / CLOCKS_PER_SEC;
 
 
-    //cout<<txt<<endl;
     cout<<"Number of matches of \""<<pat<<"\" is "<<cou<<endl<<"Time taken:"<<elapsed_secs<<endl;
     cou=0;
     }
    file.close();
-
     
     return 0;
 }
