@@ -8,18 +8,21 @@ using namespace std;
 #include "read_file.h"
 
 
-int cou=0; 
+//int cou=0; 
 #define d 256
 
  
-/* pat -> pattern
+/*  pat -> pattern
     txt -> text
     q -> A prime number
+    *
+    return an int, number of occurences 
 */
-void search(char pat[], char txt[], int q)
+int search(char pat[], char txt[], int q)
 {
     int M = strlen(pat);
     int N = strlen(txt);
+    int cou = 0;
     int i, j;
     int p = 0; // hash value for pattern
     int t = 0; // hash value for txt
@@ -71,24 +74,25 @@ void search(char pat[], char txt[], int q)
             t = (t + q);
         }
     }
+    return cou;
 }
 
 
 
-// Driver program to test above function
-int main(int argc, char *argv[])
-{
-    int q = 101; // A prime number
-    string txt = read_file( argv[1] );
-    string pat = read_file( argv[2] );
+//Driver program to test above function
+// int main(int argc, char *argv[])
+// {
+//     int q = 101; // A prime number
+//     string txt = read_file( argv[1] );
+//     string pat = read_file( argv[2] );
 
-    clock_t begin = clock();
+//     clock_t begin = clock();
 
-    search((char*)pat.c_str(), (char*)txt.c_str(), q);
-    clock_t end = clock();
-    double elapsed_secs = double(end - begin)*1000 / CLOCKS_PER_SEC;
+//     int cou = search((char*)pat.c_str(), (char*)txt.c_str(), q);
+//     clock_t end = clock();
+//     double elapsed_secs = double(end - begin)*1000 / CLOCKS_PER_SEC;
 
-    cout<<"Number of matches of \""<<pat<<"\" is "<<cou<<endl<<"Time taken: "<<elapsed_secs<<" [milliseconds]"<<endl;
+//     cout<<"Number of matches of \""<<pat<<"\" is "<<cou<<endl<<"Time taken: "<<elapsed_secs<<" [milliseconds]"<<endl;
     
-    return 0;
-}
+//     return 0;
+// }
