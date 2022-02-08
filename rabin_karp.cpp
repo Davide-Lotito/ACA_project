@@ -88,7 +88,7 @@ int main(int argc, char *argv[])
     clock_t end = clock();
     double elapsed_secs = double(end - begin)*1000 / CLOCKS_PER_SEC;
 
-    cout<<"Number of matches of \""<<pat<<"\" is "<<cou<<endl<<"Time taken:"<<elapsed_secs<<endl;
+    cout<<"Number of matches of \""<<pat<<"\" is "<<cou<<endl<<"Time taken: "<<elapsed_secs<<" [milliseconds]"<<endl;
     
     return 0;
 }
