@@ -24,6 +24,9 @@ int main(int argc, char *argv[])
   //string txt = "QWERTYUIOPASDFGHJKLZXCVBNMZQWERTYUIOPASDFGHJKLZXCVBNMQWERTYUIOPASDFGHJKLZXCVBNMQWERTYUIOPASDFGHJKLZXCVBNMQWERTYUIOPASDFGHJKLZXCVBNM";
   //string pat = "QWERTYUIOPASDFGHJKLZXCVBNMZ";
 
+  clock_t t = clock();
+
+
   int N = txt.length();
   int M = pat.length();
   int K = N * 10 / M;
@@ -39,6 +42,8 @@ int main(int argc, char *argv[])
       counter++;
     }
   } catch(const std::exception& e) {}
+  
+
   
   vector<thread> threads;
 
@@ -59,7 +64,9 @@ int main(int argc, char *argv[])
     }
   } catch(const std::exception& e) {}
 
-  cout<<"Found: "<<RESULT<<" occurences"<<endl;
+  double millisecs = 1000* double(clock() - t)/CLOCKS_PER_SEC;
+
+  cout<<"Found: "<<RESULT<<" occurences"<<" in "<<millisecs<<" milliseconds."<<endl;
 
   return 0;
 }
