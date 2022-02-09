@@ -15,7 +15,7 @@ using namespace std;
     *
     return an int, number of occurences 
 */
-int search(char pat[], char txt[], int q)
+int search(char txt[] ,char pat[], int q)
 {
     int M = strlen(pat);
     int N = strlen(txt);

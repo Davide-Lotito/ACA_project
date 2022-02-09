@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 
     clock_t begin = clock();
 
-    search((char*)txt.c_str(), (char*)pat.c_str());
+    int cou = search((char*)txt.c_str(), (char*)pat.c_str());
     clock_t end = clock();
     double elapsed_secs = double(end - begin)*1000 / CLOCKS_PER_SEC;
 

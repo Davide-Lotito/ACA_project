@@ -5,13 +5,15 @@
 
 #include "read_file.h"
 #include "rabin_karp.h"
+#include "boyer_moore.h"
 
 int RESULT = 0;
 
 void foo(string text, string pattern, int i) 
 {
   //cout<<"I'm thread "<<i<<", occurence: ";
-  int cou = search((char*)pattern.c_str(), (char*)text.c_str(), 101);
+  //int cou = search((char*)text.c_str(), (char*)pattern.c_str(), 101);
+  int cou = search((char*)text.c_str(), (char*)pattern.c_str());
   RESULT += cou;
   //cout<<cou<<endl;
 }
@@ -65,7 +67,7 @@ int main(int argc, char *argv[])
   } catch(const std::exception& e) {}
 
   double millisecs = 1000* double(clock() - t)/CLOCKS_PER_SEC;
-
+  cout<<"Threads: "<<threads.size()<<endl;
   cout<<"Found: "<<RESULT<<" occurences"<<" in "<<millisecs<<" milliseconds."<<endl;
 
   return 0;

@@ -5,7 +5,6 @@
 
 using namespace std;
 
-int cou=0; 
 # define NO_OF_CHARS 256
  
 // A utility function to get maximum of two integers
@@ -30,10 +29,11 @@ void badCharHeuristic( char *str, int size,
  
 /* A pattern searching function that uses Bad
    Character Heuristic of Boyer Moore Algorithm */
-void search( char *txt,  char *pat)
+int search( char *txt,  char *pat)
 {
     int m = strlen(pat);
     int n = strlen(txt);
+    int cou = 0;
  
     int badchar[NO_OF_CHARS];
  
@@ -82,5 +82,6 @@ void search( char *txt,  char *pat)
                character. */
             s += max(1, j - badchar[txt[s+j]]);
     }
+    return cou;
 }
  
