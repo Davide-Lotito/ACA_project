@@ -5,4 +5,4 @@ cd ./data/
 python3 remove_nl.py genome.fna 
 cd ..
 mpic++ -std=c++11 ./parallel2.cpp
-mpirun ./a.out ./data/genome_no_new_lines.txt ./data/pat.txt
+mpiexec -n 16 --oversubscribe ./a.out ./data/genome_no_new_lines.txt ./data/pat.txt  
