@@ -3,6 +3,9 @@
 #include <stdlib.h>
 #include <iostream>  
 
+#include <string>
+#include <unordered_map>
+
 #include "read_file.h"
 #include "boyer_moore.h"
 
@@ -15,6 +18,7 @@ int main (int argc, char *argv[]) {
     string pat = read_file( argv[2] );
 
     int N = txt.length();
+
     int M = pat.length();
 
 	MPI_Status status;
@@ -24,14 +28,29 @@ int main (int argc, char *argv[]) {
 	MPI_Comm_rank(MPI_COMM_WORLD, &myrank);
 	MPI_Comm_size(MPI_COMM_WORLD, &size);
 
+
+    // (size-1)(N/(size-1)) < N  ?????????? If true = BAAAAD
     int payLoadSize = (int)(N/(size-1));
+
+	
+
+	hash<string> hasher;
+
 
 	if (myrank == 0)
 	{   
-		// master sends only a section
+		cout<<"size of the full text: "<<N<<endl;
+
+
+		// master sends a 'subtext'  to each of the slaves
+		int offset = 0;
 		for (int p = 1; p < size; ++p){
-			retVal = MPI_Send(txt.c_str(), payLoadSize, MPI_CHAR, p, TAG, MPI_COMM_WORLD);
-        }
+			string subtxt = txt.substr(offset, payLoadSize);
+			// cout<<"preparing payload of size: "<<subtxt.length()<<" vs "<<strlen(subtxt.c_str())<<" vs payloadsize:"<<payLoadSize<<endl;
+			retVal = MPI_Send(subtxt.c_str(), payLoadSize, MPI_CHAR, p, TAG, MPI_COMM_WORLD);
+			offset+=payLoadSize;
+		}
+
 		// master receives 
 		for (int p = 1; p < size; ++p){
             int result;
@@ -45,16 +64,20 @@ int main (int argc, char *argv[]) {
 	else
 	{
 
-		cout<<"NEW SLAVE!"<<endl;
 		//slave
-		char buf[payLoadSize];
+		char buf[payLoadSize+1];
 		// slaves receive a small vector...
 		retVal = MPI_Recv(&buf, payLoadSize, MPI_CHAR, 0, TAG, MPI_COMM_WORLD, &status);
+		buf[payLoadSize] = '\0';
+
+
 		// search 
 		int result = 0;
         result = search(buf,(char*)pat.c_str());
 		// sends back the results to the master
 		retVal = MPI_Send(&result, 1, MPI_INT, 0, TAG, MPI_COMM_WORLD);
+		cout<<"Slave of rank: "<<myrank<<" subtext hash: "<<hasher(buf)<<" length of the string: "<< strlen(buf) << " length of the char array: "<< sizeof(buf)/sizeof(buf[0])<<endl;
+
 	}
 	
 	MPI_Finalize();
