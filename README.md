@@ -12,6 +12,7 @@ Substring matching with applications to genomics/proteomics.
 ## Other useful links and resources:
 * https://en.wikipedia.org/wiki/Amdahl%27s_law
 * https://ftp.ncbi.nih.gov/genbank/
+* https://www.open-mpi.org/doc/v4.1/
 
 
 
