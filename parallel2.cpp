@@ -2,7 +2,6 @@
 #include <mpi.h>
 #include <stdlib.h>
 #include <iostream>  
-
 #include <string>
 #include <unordered_map> //hash
 
@@ -10,7 +9,6 @@
 #include "./headers/boyer_moore.h"
 
 #define TAG 555
-
 
 int main (int argc, char *argv[]) {
 
@@ -33,6 +31,7 @@ int main (int argc, char *argv[]) {
 
 	if (myrank == 0)
 	{   
+
 		cout<<"size of the full text: "<<N<<endl;
 
 		// master sends a 'subtext'  to each of the slaves
@@ -54,8 +53,8 @@ int main (int argc, char *argv[]) {
             }
 		}
 	}
-	else
-	{
+	
+	if(myrank != 0){
 
 		//slave
 		char buf[payLoadSize+1];
@@ -68,7 +67,7 @@ int main (int argc, char *argv[]) {
         result = search(buf,(char*)pat.c_str());
 		// sends back the results to the master
 		retVal = MPI_Send(&result, 1, MPI_INT, 0, TAG, MPI_COMM_WORLD);
-		cout<<"Slave of rank: "<<myrank<<" subtext hash: "<<hasher(buf)<<" length of the string: "<< strlen(buf) << " length of the char array: "<< sizeof(buf)/sizeof(buf[0])<<endl;
+		cout<<"Slave of rank: "<<myrank<<" subtext hash: "<<hasher(buf)<<" length of the string: "<< strlen(buf);// << " length of the char array: "<< sizeof(buf)/sizeof(buf[0])<<endl;
 
 	}
 	
