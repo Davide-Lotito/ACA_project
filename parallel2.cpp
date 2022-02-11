@@ -8,15 +8,14 @@
 #include "./headers/read_file.h"
 #include "./headers/boyer_moore.h"
 
+#include "split_strings.h"
+
 #define TAG 555
 
 int main (int argc, char *argv[]) {
 
-    string txt = read_file( argv[1] );
-    string pat = read_file( argv[2] );
+   
 
-    int N = txt.length();
-    int M = pat.length();
 
 	MPI_Status status;
 	int myrank, size, retVal;	
@@ -25,12 +24,20 @@ int main (int argc, char *argv[]) {
 	MPI_Comm_rank(MPI_COMM_WORLD, &myrank);
 	MPI_Comm_size(MPI_COMM_WORLD, &size);
 
-    int payLoadSize = (int)(N/(size-1));
 
 	hash<string> hasher; //only for debug
 
-	if (myrank == 0)
-	{   
+
+	string txt = read_file( argv[1] );
+    string pat = read_file( argv[2] );
+    int N = txt.length();
+    int M = pat.length();
+	int payLoadSize = (int)(N/(size-1));
+
+    
+
+
+	if (myrank == 0){   
 
 		cout<<"size of the full text: "<<N<<endl;
 
@@ -38,7 +45,6 @@ int main (int argc, char *argv[]) {
 		int offset = 0;
 		for (int p = 1; p < size; ++p){
 			string subtxt = txt.substr(offset, payLoadSize);
-			// cout<<"preparing payload of size: "<<subtxt.length()<<" vs "<<strlen(subtxt.c_str())<<" vs payloadsize:"<<payLoadSize<<endl;
 			retVal = MPI_Send(subtxt.c_str(), payLoadSize, MPI_CHAR, p, TAG, MPI_COMM_WORLD);
 			offset+=payLoadSize;
 		}
@@ -67,7 +73,7 @@ int main (int argc, char *argv[]) {
         result = search(buf,(char*)pat.c_str());
 		// sends back the results to the master
 		retVal = MPI_Send(&result, 1, MPI_INT, 0, TAG, MPI_COMM_WORLD);
-		cout<<"Slave of rank: "<<myrank<<" subtext hash: "<<hasher(buf)<<" length of the string: "<< strlen(buf);// << " length of the char array: "<< sizeof(buf)/sizeof(buf[0])<<endl;
+		cout<<"Slave of rank: "<<myrank<<" subtext hash: "<<hasher(buf)<<" length of the string: "<<strlen(buf)<<endl;
 
 	}
 	
