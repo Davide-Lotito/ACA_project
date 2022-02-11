@@ -17,8 +17,6 @@
 int main (int argc, char *argv[]) {
 
    
-
-
 	MPI_Status status;
 	int myrank, size, retVal;	
 
@@ -53,7 +51,6 @@ int main (int argc, char *argv[]) {
 
 			string message = string(subtxt)+SEPARATOR+string(pat)+"\0";
 		
-			// retVal = MPI_Send(subtxt.c_str(), payLoadSize, MPI_CHAR, p, TAG, MPI_COMM_WORLD);
 		    retVal = MPI_Send(message.c_str(),  fullMessageSize   , MPI_CHAR, p, TAG, MPI_COMM_WORLD);
 
 
@@ -77,20 +74,16 @@ int main (int argc, char *argv[]) {
 	if(myrank != 0){
 
 		//slave
-		// char buf[payLoadSize+1];
 		char buf[fullMessageSize];
 		
 		// slaves receive a small vector...
 		retVal = MPI_Recv(&buf, fullMessageSize, MPI_CHAR, 0, TAG, MPI_COMM_WORLD, &status);
-	
-		// no need, \0 put in master //buf[fullMessageSize] = '\0'; //add the terminator -- only for debug
 
 		vector<string> parts = split(SEPARATOR, string(buf));
 		string subtext = parts[0];
 		string pattern = parts[1];
 
 		// search
-        // int result = search(buf,(char*)pat.c_str());
 		int result = search((char*)subtext.c_str(), (char*)pattern.c_str());
 
 		cout<<"Slave of rank: "<<myrank<<" subtext hash: "<<subtext.length()<<" length of the string: "<<subtext.length()<<endl;
