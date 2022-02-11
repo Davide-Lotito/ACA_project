@@ -5,8 +5,8 @@
 
 using namespace std;
 
-#include "read_file.h"
-#include "rabin_karp.h"
+#include "./headers/read_file.h"
+#include "./headers/rabin_karp.h"
 
 //Driver program to test above function
 int main(int argc, char *argv[])

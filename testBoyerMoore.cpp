@@ -4,8 +4,8 @@
 #include <string>
 
 using namespace std;
-#include "read_file.h"
-#include "boyer_moore.h"
+#include "./headers/read_file.h"
+#include "./headers/boyer_moore.h"
 
 // Driver program to test above function
 int main(int argc, char *argv[])

@@ -3,9 +3,9 @@
 #include <thread>         // std::thread
 #include <math.h>         // ceil
 
-#include "read_file.h"
-#include "rabin_karp.h"
-#include "boyer_moore.h"
+#include "./headers/read_file.h"
+#include "./headers/rabin_karp.h"
+#include "./headers/boyer_moore.h"
 
 int RESULT = 0;
 

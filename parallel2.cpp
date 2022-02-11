@@ -4,10 +4,10 @@
 #include <iostream>  
 
 #include <string>
-#include <unordered_map>
+#include <unordered_map> //hash
 
-#include "read_file.h"
-#include "boyer_moore.h"
+#include "./headers/read_file.h"
+#include "./headers/boyer_moore.h"
 
 #define TAG 555
 
@@ -18,7 +18,6 @@ int main (int argc, char *argv[]) {
     string pat = read_file( argv[2] );
 
     int N = txt.length();
-
     int M = pat.length();
 
 	MPI_Status status;
@@ -28,19 +27,13 @@ int main (int argc, char *argv[]) {
 	MPI_Comm_rank(MPI_COMM_WORLD, &myrank);
 	MPI_Comm_size(MPI_COMM_WORLD, &size);
 
-
-    // (size-1)(N/(size-1)) < N  ?????????? If true = BAAAAD
     int payLoadSize = (int)(N/(size-1));
 
-	
-
-	hash<string> hasher;
-
+	hash<string> hasher; //only for debug
 
 	if (myrank == 0)
 	{   
 		cout<<"size of the full text: "<<N<<endl;
-
 
 		// master sends a 'subtext'  to each of the slaves
 		int offset = 0;
@@ -68,8 +61,7 @@ int main (int argc, char *argv[]) {
 		char buf[payLoadSize+1];
 		// slaves receive a small vector...
 		retVal = MPI_Recv(&buf, payLoadSize, MPI_CHAR, 0, TAG, MPI_COMM_WORLD, &status);
-		buf[payLoadSize] = '\0';
-
+		buf[payLoadSize] = '\0'; //add the terminator -- only for debug
 
 		// search 
 		int result = 0;
