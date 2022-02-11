@@ -14,11 +14,23 @@
 
 #define SEPARATOR "&"
 
+
+#include <malloc.h>
+
+
+
+
+
+
 int main (int argc, char *argv[]) {
 
    
 	MPI_Status status;
 	int myrank, size, retVal;	
+
+
+	int fullMessageSize;
+
 
 	MPI_Init(&argc, &argv);
 	MPI_Comm_rank(MPI_COMM_WORLD, &myrank);
@@ -26,20 +38,20 @@ int main (int argc, char *argv[]) {
 
 
 	hash<string> hasher; //only for debug
+	
 
-
-	string txt = read_file( argv[1] );
-    string pat = read_file( argv[2] );
-    int N = txt.length();
-    int M = pat.length();
-	int payLoadSize = (int)(N/(size-1));
-	int fullMessageSize = payLoadSize+1+M+1;
 
 
 	/*
 	Master's Part
 	*/
 	if (myrank == 0){   
+
+		string txt = read_file( argv[1] );
+		string pat = read_file( argv[2] );
+    	int N = txt.length();
+    	int M = pat.length();
+		int payLoadSize = (int)(N/(size-1));
 
 		cout<<"size of the full text: "<<N<<endl;
 
@@ -48,14 +60,17 @@ int main (int argc, char *argv[]) {
 		for (int p = 1; p < size; ++p){
 			
 			string subtxt = txt.substr(offset, payLoadSize);
-
 			string message = string(subtxt)+SEPARATOR+string(pat)+"\0";
-		
-		    retVal = MPI_Send(message.c_str(),  fullMessageSize   , MPI_CHAR, p, TAG, MPI_COMM_WORLD);
+			cout<<"number of elements in the message: "<<message.length()<<"\n"; 
 
-
+		    retVal = MPI_Send(message.c_str(),  message.length() , MPI_CHAR, p, TAG, MPI_COMM_WORLD);
 			offset+=payLoadSize;
 		}
+
+
+
+
+
 
 		// master receives results from slaves
 		for (int p = 1; p < size; ++p){
@@ -67,17 +82,39 @@ int main (int argc, char *argv[]) {
             }
 		}
 	}
+
+
+
 	
 	/*
 	Slaves' Part
 	*/
 	if(myrank != 0){
 
-		//slave
-		char buf[fullMessageSize];
+		int messageSize;
+
+		MPI_Status status;
+		// Probe for an incoming message from process zero
+		MPI_Probe(0, TAG, MPI_COMM_WORLD, &status);
 		
-		// slaves receive a small vector...
-		retVal = MPI_Recv(&buf, fullMessageSize, MPI_CHAR, 0, TAG, MPI_COMM_WORLD, &status);
+	    // When probe returns, the status object has the size and other
+        // attributes of the incoming message. Get the message size
+        MPI_Get_count(&status, MPI_CHAR, &messageSize);
+
+		cout<< "number of elements in message as received by slave: "<<messageSize<<"\n";
+	
+		// Allocate a buffer to hold the incoming chars
+		int numBytes = sizeof(char)*(messageSize);
+		cout<<"num bytes: "<<numBytes<<"\n";
+
+		char* buf = (char*)malloc(numBytes);
+
+		int bufferSize = malloc_usable_size (buf);
+		cout <<"after malloc: "<< bufferSize<<"\n";
+
+		retVal = MPI_Recv(buf, messageSize, MPI_INT, 0, TAG, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+
+
 
 		vector<string> parts = split(SEPARATOR, string(buf));
 		string subtext = parts[0];
