@@ -7,7 +7,7 @@
 #include <malloc.h> //get dyn-allocated size  (for debugging)
 #include "./headers/read_file.h"
 #include "./headers/boyer_moore.h"
-#include "split_strings.h" //split strings by regex
+#include "./headers/split_strings.h" //split strings by regex
 #define TAG 555
 #define SEPARATOR "&"
 
