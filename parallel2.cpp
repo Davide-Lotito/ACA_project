@@ -12,6 +12,8 @@
 
 #define TAG 555
 
+#define SEPARATOR "&"
+
 int main (int argc, char *argv[]) {
 
    
@@ -33,10 +35,12 @@ int main (int argc, char *argv[]) {
     int N = txt.length();
     int M = pat.length();
 	int payLoadSize = (int)(N/(size-1));
+	int fullMessageSize = payLoadSize+1+M+1;
 
-    
 
-
+	/*
+	Master's Part
+	*/
 	if (myrank == 0){   
 
 		cout<<"size of the full text: "<<N<<endl;
@@ -44,12 +48,19 @@ int main (int argc, char *argv[]) {
 		// master sends a 'subtext'  to each of the slaves
 		int offset = 0;
 		for (int p = 1; p < size; ++p){
+			
 			string subtxt = txt.substr(offset, payLoadSize);
-			retVal = MPI_Send(subtxt.c_str(), payLoadSize, MPI_CHAR, p, TAG, MPI_COMM_WORLD);
+
+			string message = string(subtxt)+SEPARATOR+string(pat)+"\0";
+		
+			// retVal = MPI_Send(subtxt.c_str(), payLoadSize, MPI_CHAR, p, TAG, MPI_COMM_WORLD);
+		    retVal = MPI_Send(message.c_str(),  fullMessageSize   , MPI_CHAR, p, TAG, MPI_COMM_WORLD);
+
+
 			offset+=payLoadSize;
 		}
 
-		// master receives 
+		// master receives results from slaves
 		for (int p = 1; p < size; ++p){
             int result;
 			MPI_Recv(&result, 1, MPI_INT, p, TAG, MPI_COMM_WORLD, &status);
@@ -60,20 +71,32 @@ int main (int argc, char *argv[]) {
 		}
 	}
 	
+	/*
+	Slaves' Part
+	*/
 	if(myrank != 0){
 
 		//slave
-		char buf[payLoadSize+1];
+		// char buf[payLoadSize+1];
+		char buf[fullMessageSize];
+		
 		// slaves receive a small vector...
-		retVal = MPI_Recv(&buf, payLoadSize, MPI_CHAR, 0, TAG, MPI_COMM_WORLD, &status);
-		buf[payLoadSize] = '\0'; //add the terminator -- only for debug
+		retVal = MPI_Recv(&buf, fullMessageSize, MPI_CHAR, 0, TAG, MPI_COMM_WORLD, &status);
+	
+		// no need, \0 put in master //buf[fullMessageSize] = '\0'; //add the terminator -- only for debug
 
-		// search 
-		int result = 0;
-        result = search(buf,(char*)pat.c_str());
+		vector<string> parts = split(SEPARATOR, string(buf));
+		string subtext = parts[0];
+		string pattern = parts[1];
+
+		// search
+        // int result = search(buf,(char*)pat.c_str());
+		int result = search((char*)subtext.c_str(), (char*)pattern.c_str());
+
+		cout<<"Slave of rank: "<<myrank<<" subtext hash: "<<subtext.length()<<" length of the string: "<<subtext.length()<<endl;
+
 		// sends back the results to the master
 		retVal = MPI_Send(&result, 1, MPI_INT, 0, TAG, MPI_COMM_WORLD);
-		cout<<"Slave of rank: "<<myrank<<" subtext hash: "<<hasher(buf)<<" length of the string: "<<strlen(buf)<<endl;
 
 	}
 	
