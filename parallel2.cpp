@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <mpi.h>
 #include <stdlib.h>
-#include <iostream>  
+#include <iostream> //cout
 #include <string>
 #include <unordered_map> //hash strings (for debugging)
 #include <malloc.h> //get dyn-allocated size  (for debugging)
+
 #include "./headers/read_file.h"
 #include "./headers/boyer_moore.h"
-#include "./headers/split_strings.h" //split strings by regex
+
 #define TAG 555
 #define SEPARATOR "&"
 
@@ -84,22 +85,26 @@ int main (int argc, char *argv[]) {
 	
 		// Allocate a buffer to hold the incoming chars
 		int numBytes = sizeof(char)*(messageSize);
-		// cout<<"num bytes: "<<numBytes<<"\n";
+		
 		char* buf = (char*)malloc(numBytes);
-		int bufferSize = malloc_usable_size (buf);
-		// cout <<"after malloc: "<< bufferSize<<"\n";
-		retVal = MPI_Recv(buf, messageSize, MPI_INT, 0, TAG, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+		
+		retVal = MPI_Recv(buf, messageSize, MPI_CHAR, 0, TAG, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
 
 
-		//turn the incoming c_str into a C++ string, split it into text and pattern
-		vector<string> parts = split(SEPARATOR, string(buf));
-		string subtext = parts[0];
-		string pattern = parts[1];
+		// split into subtext and pattern
+		// https://www.tutorialspoint.com/c_standard_library/c_function_strtok.htm
+		char* pattern;
+    	char* text;
+
+		// get the subtext
+		text = strtok(buf, SEPARATOR);
+		// get the pattern
+		pattern = strtok(NULL, SEPARATOR);
 
 		// search
-		int result = search((char*)subtext.c_str(), (char*)pattern.c_str());
+		int result = search(text, pattern);
 
-		cout<<"Slave of rank: "<<myrank<<" subtext hash: "<<subtext.length()<<" length of the string: "<<subtext.length()<<endl;
+		cout<<"Slave of rank: "<<myrank<<" subtext hash: "<<hasher(text)<<" length of the string: "<<strlen(text)<<endl;
 
 		// sends back the results to the master
 		retVal = MPI_Send(&result, 1, MPI_INT, 0, TAG, MPI_COMM_WORLD);
