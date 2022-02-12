@@ -39,7 +39,7 @@ int main (int argc, char *argv[]) {
 		cout<<"size of the pattern: "<<M<<endl;
 
 		// master sends a 'subtext'  to each of the slaves
-		int offset = 0;
+		long long int offset = 0;
 		for (int p = 1; p < size; ++p){
 			
 			string subtxt = txt.substr(offset, payLoadSize);
