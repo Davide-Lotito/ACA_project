@@ -1,11 +1,13 @@
 import sys
 import os
 
-try:
-    from tqdm import tqdm
-except ModuleNotFoundError as e:
-    print("Please run:\n'pip install tqdm'\nAnd try again.")
-    exit()
+try: from tqdm import tqdm
+except ModuleNotFoundError as e: print("Please run:\n'pip install tqdm'\nAnd try again."); exit()
+
+
+
+usage_string =  f"""{100*"*"}\nUSAGE of 'remove_nl.py':\npython3 remove_nl.py path/to/myfile_or_my_dir\nCreates a new file: 'myfile_or_my_dir.txt', totally devoid of '\\n' chars.\nIn case a directory is given as input, the text-files it contains will be aggregated.\n{100*"*"}"""
+
 
 class Colors:
     OKGREEN = '\033[92m' 
@@ -14,12 +16,8 @@ class Colors:
     UNDERLINE = '\033[4m'
 
 
-
-usage_string =  f"""{100*"*"}\nUSAGE of 'remove_nl.py':\npython3 remove_nl.py path/to/myfile_or_my_dir\nCreates a new file: 'myfile_or_my_dir.txt', totally devoid of '\\n' chars.\nIn case a directory is given as input, the text-files it contains will be aggregated.\n{100*"*"}"""
-
 def chunker(seq, size):
     return (seq[pos:pos + size] for pos in range(0, len(seq), size))
-
 
 def __main__():
 
@@ -30,10 +28,10 @@ def __main__():
     # get proper list (or single-element-list) of files to be concatenated 
     if os.path.isdir(sys.argv[1]):
         files = [os.path.join(sys.argv[1],f) for f in os.listdir(sys.argv[1])]
-        newname = sys.argv[1].split("/")[-2]
+        newname = f"{sys.argv[1].split('/')[-2]}_no_new_lines.txt"
     elif os.path.isfile(sys.argv[1]):
         files = [sys.argv[1]]
-        newname = sys.argv[1].split("/")[-1].split(".")[0]
+        newname = f"{sys.argv[1].split('/')[-1].split('.')[0]}_no_new_lines.txt"
 
     else:
         print(usage_string)
@@ -50,7 +48,12 @@ def __main__():
     # write each chunk to the file in append mode
     print("writing back...")
     CHUNK_SIZE = 100000 
-    with open(  newname  +"_no_new_lines.txt", "a+") as f:
+
+    # delete file contents in case it already existed.
+    with open(newname, "w+") as f:
+        f.write("")
+
+    with open( newname , "a+") as f:
         for chunk in tqdm(chunker(buffer, CHUNK_SIZE)):
             chunk = chunk.replace("\n", "") #remove any newline from each chunk
             f.write(chunk) 
