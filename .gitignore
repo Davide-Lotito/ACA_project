@@ -32,3 +32,9 @@
 *.app
 
 .vscode/
+
+# a large dataset
+./data/ApisMellifera/
+
+# a very large dataset
+./data/HomoSapiens/
