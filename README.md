@@ -10,10 +10,10 @@ Substring matching with applications to genomics/proteomics.
 <a href="https://github.com/avinashk442/String-matching-algorithms-and-applications">https://github.com/avinashk442/String-matching-algorithms-and-applications</a>
 
 ## Other useful links and resources:
-* [Amdal Law]https://en.wikipedia.org/wiki/Amdahl%27s_law
-* [genbank]https://ftp.ncbi.nih.gov/genbank/
-* [openMPI Documentation]https://www.open-mpi.org/doc/v4.1/
-* [list of genomes]https://en.wikipedia.org/wiki/Genome
+* <a href="https://en.wikipedia.org/wiki/Amdahl%27s_law">Amdahl Law</a>
+* <a href="[genbank]https://ftp.ncbi.nih.gov/genbank/">genbank</a>
+* <a href="https://en.wikipedia.org/wiki/Genome">List of Genomoes</a>
+* <a href="https://www.open-mpi.org/doc/v4.1/">Open MPI Documentation</a>
 
 
 
