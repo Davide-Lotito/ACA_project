@@ -31,7 +31,7 @@ int main (int argc, char *argv[]) {
 
 		string txt = read_file( argv[1] );
 		string pat = read_file( argv[2] );
-    	int N = txt.length();
+    	long long int N = txt.length();
     	int M = pat.length();
 		int payLoadSize = (int)(N/(size-1));
 
