@@ -3,7 +3,8 @@
 clear
 rm ../a.out
 cd ../data/
-python3 remove_nl.py genome.fna 
+python3 remove_nl.py ./EscherichiaColi/genome.fna
+python3 remove_nl.py pat.txt
 cd ..
 g++ -pthread -std=c++11 ./parallel1.cpp
 ./a.out ./data/genome_no_new_lines.txt ./data/pat.txt 

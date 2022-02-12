@@ -36,6 +36,7 @@ int main (int argc, char *argv[]) {
 		int payLoadSize = (int)(N/(size-1));
 
 		cout<<"size of the full text: "<<N<<endl;
+		cout<<"size of the pattern: "<<M<<endl;
 
 		// master sends a 'subtext'  to each of the slaves
 		int offset = 0;
@@ -49,15 +50,19 @@ int main (int argc, char *argv[]) {
 			offset+=payLoadSize;
 		}
 
+		int result;
+		int results=0;
 		// master receives results from slaves
 		for (int p = 1; p < size; ++p){
-            int result;
+            //int result;
 			MPI_Recv(&result, 1, MPI_INT, p, TAG, MPI_COMM_WORLD, &status);
-			if(result !=0){
+			results+=result;
+			/*if(result !=0){
                 cout<<"Occurences: "<<result<<endl;
                 break;
-            }
+            }*/
 		}
+		cout<<"Occurences: "<<results<<endl;
 	}
 
 
