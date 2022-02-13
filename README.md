@@ -11,7 +11,7 @@ Substring matching with applications to genomics/proteomics.
 
 ## Other useful links and resources:
 * <a href="https://en.wikipedia.org/wiki/Amdahl%27s_law">Amdahl Law</a>
-* <a href="hhttps://www.ncbi.nlm.nih.gov/genbank/">Genbank</a>
+* <a href="https://www.ncbi.nlm.nih.gov/genbank/">Genbank</a>
 * <a href="https://en.wikipedia.org/wiki/Genome">List of Genomoes</a>
 * <a href="https://www.open-mpi.org/doc/v4.1/">Open MPI Documentation</a>
 * <a href="https://drive.google.com/drive/folders/1i3BT1cYYn8K2EbuV4GppJf4Ieq0yAkxB?usp=sharing">Drive</a>
