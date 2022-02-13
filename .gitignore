@@ -38,3 +38,5 @@
 
 # a very large dataset
 ./data/HomoSapiens/
+
+./data/genome_no_new_lines.txt

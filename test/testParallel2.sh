@@ -3,8 +3,9 @@
 clear
 rm ../a.out
 cd ../data/
-python3 remove_nl.py ./EscherichiaColi/genome.fna 
+# python3 remove_nl.py ./EscherichiaColi/genome.fna 
 # python3 remove_nl.py ./NostocPunctiforme/genome.fna
+python3 remove_nl.py ./ApisMellifera/genome
 python3 remove_nl.py pat.txt
 cd ..
 mpic++ -std=c++11 ./parallel2.cpp

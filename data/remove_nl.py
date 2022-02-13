@@ -28,7 +28,7 @@ def __main__():
     # get proper list (or single-element-list) of files to be concatenated 
     if os.path.isdir(sys.argv[1]):
         files = [os.path.join(sys.argv[1],f) for f in os.listdir(sys.argv[1])]
-        newname = f"{sys.argv[1].split('/')[-2]}_no_new_lines.txt"
+        newname = f"{sys.argv[1].split('/')[-1]}_no_new_lines.txt"
     elif os.path.isfile(sys.argv[1]):
         files = [sys.argv[1]]
         newname = f"{sys.argv[1].split('/')[-1].split('.')[0]}_no_new_lines.txt"
