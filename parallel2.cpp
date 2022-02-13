@@ -35,8 +35,9 @@ int main (int argc, char *argv[]) {
     	int M = pat.length();
 		int payLoadSize = (int)(N/(size-1));
 
-		cout<<"size of the full text: "<<N<<endl;
-		cout<<"size of the pattern: "<<M<<endl;
+		clock_t t = clock();
+
+		cout<<"size of the full text: "<<N<<" and the "<<"size of the pattern: "<<M<<endl;
 
 		// master sends a 'subtext'  to each of the slaves
 		long long int offset = 0;
@@ -62,7 +63,8 @@ int main (int argc, char *argv[]) {
                 break;
             }*/
 		}
-		cout<<"Occurences: "<<results<<endl;
+		double millisecs = 1000* double(clock() - t)/CLOCKS_PER_SEC;
+		cout<<"Found: "<<results<<" occurences"<<" in "<<millisecs<<" milliseconds."<<endl;
 	}
 
 
