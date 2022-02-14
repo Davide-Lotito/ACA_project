@@ -65,8 +65,8 @@ int search(char txt[] ,char pat[])
  
             // We might get negative value of t, converting it
             // to positive
-            if (t < 0)
-            t = (t + q);
+            // if (t < 0)
+            // t = (t + q);
         }
     }
     return cou;
