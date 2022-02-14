@@ -23,7 +23,7 @@ int search(char txt[] ,char pat[])
     int h = 1; 
  
     // The value of h would be "pow(R, M-1)%q"
-    // do not use external library
+    // do not use external library for pow
     // avoid overflow
     for (i = 0; i < M-1; i++)
         h = (h*R)%q;
