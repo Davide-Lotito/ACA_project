@@ -5,16 +5,12 @@
 
 using namespace std;
 
-//int cou=0; 
-#define d 256
-#define Q 1009
 
- 
-/*  pat -> pattern
-    txt -> text
-    *
-    return an int, number of occurences 
-*/
+#define R 256 //alphabet dimension
+#define Q 78059
+
+  
+// return the number of occurences
 int search(char txt[] ,char pat[])
 {
     int M = strlen(pat);
@@ -24,18 +20,20 @@ int search(char txt[] ,char pat[])
     int i, j;
     int p = 0; // hash value for pattern
     int t = 0; // hash value for txt
-    int h = 1;
+    int h = 1; 
  
-    // The value of h would be "pow(d, M-1)%q"
+    // The value of h would be "pow(R, M-1)%q"
+    // do not use external library
+    // avoid overflow
     for (i = 0; i < M-1; i++)
-        h = (h*d)%q;
+        h = (h*R)%q;
  
     // Calculate the hash value of pattern and first
     // window of text
     for (i = 0; i < M; i++)
     {
-        p = (d*p + pat[i])%q;
-        t = (d*t + txt[i])%q;
+        p = (R*p + pat[i])%q;
+        t = (R*t + txt[i])%q;
     }
  
     // Slide the pattern over text one by one
@@ -56,7 +54,6 @@ int search(char txt[] ,char pat[])
  
             // if p == t and pat[0...M-1] = txt[i, i+1, ...i+M-1]
             if (j == M)
-                //printf("Pattern found at index %d \n", i);
                 cou++;
         }
  
@@ -64,7 +61,7 @@ int search(char txt[] ,char pat[])
         // leading digit, add trailing digit
         if ( i < N-M )
         {
-            t = (d*(t - txt[i]*h) + txt[i+M])%q;
+            t = (R*(t - txt[i]*h) + txt[i+M])%q;
  
             // We might get negative value of t, converting it
             // to positive
