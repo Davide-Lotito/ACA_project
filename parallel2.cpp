@@ -7,7 +7,7 @@
 #include <malloc.h> //get dyn-allocated size  (for debugging)
 
 #include "./headers/read_file.h"
-#include "./headers/boyer_moore.h"
+#include "./headers/rabin_karp.h"
 
 #define TAG 555
 #define SEPARATOR "&"

@@ -7,19 +7,20 @@ using namespace std;
 
 //int cou=0; 
 #define d 256
+#define Q 1009
 
  
 /*  pat -> pattern
     txt -> text
-    q -> A prime number
     *
     return an int, number of occurences 
 */
-int search(char txt[] ,char pat[], int q)
+int search(char txt[] ,char pat[])
 {
     int M = strlen(pat);
     int N = strlen(txt);
     int cou = 0;
+    int q = Q;
     int i, j;
     int p = 0; // hash value for pattern
     int t = 0; // hash value for txt
