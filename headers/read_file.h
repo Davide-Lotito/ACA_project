@@ -16,9 +16,3 @@ string read_file(string pathname){
 }
 
 
-// int main(int argc, char *argv[]){
-//     string s = read_file(argv[1]);
-//     cout << s << "\n";
-//     // printf("%s\n", s.c_str());
-//     return 0;
-// }
