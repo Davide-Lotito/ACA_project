@@ -9,6 +9,10 @@ Substring matching with applications to genomics/proteomics.
 
 <a href="https://github.com/avinashk442/String-matching-algorithms-and-applications">https://github.com/avinashk442/String-matching-algorithms-and-applications</a>
 
+## Explanation about the project
+
+All the explanations on the project, the ideas, the arguments are well described (with photos and diagrams) in the jupyer notebook that is attached.
+
 ## Other useful links and resources:
 * <a href="https://en.wikipedia.org/wiki/Amdahl%27s_law">Amdahl Law</a>
 * <a href="https://www.ncbi.nlm.nih.gov/genbank/">Genbank</a>
