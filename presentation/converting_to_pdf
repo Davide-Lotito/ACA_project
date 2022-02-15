@@ -1,0 +1,5 @@
+Run:
+
+jupyter nbconvert --to html notebook.ipynb
+
+Then open the html file in your browser and save it as a pdf (Ctrl + P), 'P' for 'print'.
