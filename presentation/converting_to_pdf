@@ -1,3 +1,5 @@
+IMPORTANT: re-run all of the cells first, to make sure everything's fine.
+
 Run:
 
 jupyter nbconvert --to html notebook.ipynb
