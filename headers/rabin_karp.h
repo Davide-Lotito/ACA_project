@@ -9,7 +9,8 @@ using namespace std;
 #define R 256 //alphabet dimension
 #define Q 78059 // big and prime number
 
-  
+
+//START RABINKARP
 // return the number of occurences
 int search(char txt[] ,char pat[])
 {
@@ -66,4 +67,5 @@ int search(char txt[] ,char pat[])
         }
     }
     return cou;
+    //END RABINKARP
 }

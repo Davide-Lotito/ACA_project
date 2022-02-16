@@ -14,6 +14,7 @@
 
 
 int main (int argc, char *argv[]) {
+	
 
 	MPI_Status status;
 	int myrank, size, retVal;	
@@ -27,6 +28,7 @@ int main (int argc, char *argv[]) {
 	/*
 	Master's Part
 	*/
+	//START MASTER
 	if (myrank == 0){   
 
 		string txt = read_file( argv[1] );
@@ -64,14 +66,17 @@ int main (int argc, char *argv[]) {
             }*/
 		}
 		double millisecs = 1000* double(clock() - t)/CLOCKS_PER_SEC;
+		//END MASTER
 		cout<<"Found: "<<results<<" occurences"<<" in "<<millisecs<<" milliseconds."<<endl;
+		
 	}
-
+	
 
 
 	/*
 	Slaves' Part
 	*/
+	//START SLAVE
 	if(myrank != 0){
 
 		//Dynamic probing of incoming message size. 
@@ -114,8 +119,9 @@ int main (int argc, char *argv[]) {
 		cout<<"Slave of rank: "<<myrank<<" subtext hash: "<<hasher(text)<<" length of the string: "<<strlen(text)<<endl;
 
 		// sends back the results to the master
+		//END SLAVE
 		retVal = MPI_Send(&result, 1, MPI_INT, 0, TAG, MPI_COMM_WORLD);
-
+		
 	}
 	
 	MPI_Finalize();
