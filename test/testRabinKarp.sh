@@ -3,8 +3,8 @@
 clear
 rm ../a.out
 cd ../data/
-# python3 remove_nl.py ./EscherichiaColi/genome.fna
-python3 remove_nl.py ./NostocPunctiforme/genome.fna
+python3 remove_nl.py ./EscherichiaColi/genome.fna
+# python3 remove_nl.py ./NostocPunctiforme/genome.fna
 python3 remove_nl.py pat.txt
 cd ..
 g++ -std=c++11 testRabinKarp.cpp
