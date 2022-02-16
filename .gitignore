@@ -41,3 +41,6 @@
 
 ./data/genome_no_new_lines.txt
 ./data/pat_no_new_lines.txt
+
+# notebook's venv
+.my_env/
