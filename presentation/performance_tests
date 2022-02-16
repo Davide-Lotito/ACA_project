@@ -1,0 +1,93 @@
+Nostoc 9059631
+Pattern 1380, uno dei primi geni
+
+impl,time_ms
+seriale,92
+2,127.546
+3,69.199
+4,48.484
+5,40.945
+6,33.54
+7,30.963
+8,25.976
+
+
+E Coli   5594837
+Pattern  2463
+
+impl,time_ms
+seriale,58
+2,78
+3,41.43
+4,30.69
+5,25.976
+6,21.635
+7,18.202
+8,18.256
+
+
+
+
+Apis 220792724
+Pattern: 800
+
+impl,ms
+serial,2266.19
+2,3247.77
+3,1914.9
+4,1488.64
+5,1276.29
+6,1155.33
+7,1003.32
+8,947.228
+
+
+CLUSTER
+
+
+Unique geographical area
+
+
+Apis 220792724
+Pattern: 800
+
+
+impl,time_ms
+2,3629
+3,2252
+4,1878
+5,1586
+6,1408
+7,1260
+
+
+WEAK SCALABILITY
+
+len(Nostoc)/len(Ecoli) ~= 1.5
+
+Ecoli, 4 slaves,
+each slave gets: 1398709
+70 ms
+
+Nostoc, 6 slaves
+each slave gets: 1509938
+86.36 ms
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
