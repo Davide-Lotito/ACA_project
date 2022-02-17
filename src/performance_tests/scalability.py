@@ -60,7 +60,7 @@ class SingleTrial:
 
 
 
-os.system("mpic++ -std=c++11 main.cpp")
+os.system("mpic++ -std=c++11 ../parallel/main.cpp")
 
 
 gene_indeces = [2, 40, 1234]
