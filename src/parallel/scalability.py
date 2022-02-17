@@ -21,7 +21,7 @@ class SingleTrial:
 
 
         if params["num_proc"] == 1:
-            process = subprocess.Popen(['./../serial/serial.sh', params["path_to_genome"]], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            process = subprocess.Popen(['./serial.sh', params["path_to_genome"]], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             stdout, stderr = process.communicate()  
         else:
             process = subprocess.Popen(['./scalability.sh', str(params["num_proc"])+ ("  --oversubscribe" if params["over"] else ""), params["path_to_genome"]], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -70,6 +70,7 @@ results_list = []
 
 # e coli
 for i in tqdm(range(1,9)):
+    
     for g in gene_indeces:
         res = SingleTrial(over=True, num_proc=i, gene_index=g).all_results
         res["genome"] = "e_coli"
