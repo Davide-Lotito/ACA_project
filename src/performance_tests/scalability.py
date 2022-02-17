@@ -72,7 +72,7 @@ results_list = []
 for i in tqdm(range(1,9)):
     
     for g in gene_indeces:
-        res = SingleTrial(over=True, num_proc=i, gene_index=g).all_results
+        res = SingleTrial(num_proc=i, gene_index=g).all_results
         res["genome"] = "e_coli"
         res["gene_index"] = g
         res["num_cores"] = i
@@ -82,7 +82,7 @@ for i in tqdm(range(1,9)):
 # nostoc punctiforme
 for i in tqdm(range(1,9)):
     for g in gene_indeces:
-        res = SingleTrial(over=True, num_proc=i, gene_index=g, path_to_genome="../../data/NostocPunctiforme/genome.fna").all_results
+        res = SingleTrial(num_proc=i, gene_index=g, path_to_genome="../../data/NostocPunctiforme/genome.fna").all_results
         res["genome"] = "nostoc"
         res["gene_index"] = g
         res["num_cores"] = i
