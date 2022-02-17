@@ -17,13 +17,17 @@ int main(int argc, char *argv[])
 	string pat = read_file( "./pat_no_new_lines.txt" );
 	system("rm genome_no_new_lines.txt  pat_no_new_lines.txt");
 
+    cout<<"size of the full text: "<<txt.length()<<" and the "<<"size of the pattern: "<<pat.length()<<endl;
+
+
+
     clock_t begin = clock();
 
     int cou = search((char*)txt.c_str(), (char*)pat.c_str());
     clock_t end = clock();
     double elapsed_secs = double(end - begin)*1000 / CLOCKS_PER_SEC;
 
-    cout<<"Occurences: "<<cou<<" time taken: "<<elapsed_secs<<" [milliseconds]"<<endl;
-    
+    cout<<"Found: "<<cou<<" occurences"<<" in "<<elapsed_secs<<" milliseconds."<<endl;
+
     return 0;
 }

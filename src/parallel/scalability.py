@@ -7,7 +7,7 @@ from tqdm import tqdm
 class SingleTrial:
 
     def __init__(self, **kwargs):
-        params = {"num_proc": 2 , "path_to_genome" : "../../data/EscherichiaColi/genome.fna", "over":False, "gene_index":2}
+        params = {"num_proc": 2, "path_to_genome" : "../../data/EscherichiaColi/genome.fna", "over":False, "gene_index":2}
         params.update(kwargs)
         
 
@@ -20,12 +20,16 @@ class SingleTrial:
             f.write(self.genes[params["gene_index"]])
 
 
-        process = subprocess.Popen(['./scalability.sh', str(params["num_proc"])+ ("  --oversubscribe" if params["over"] else ""), params["path_to_genome"]], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        stdout, stderr = process.communicate()
+        if params["num_proc"] == 1:
+            process = subprocess.Popen(['./../serial/serial.sh', params["path_to_genome"]], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            stdout, stderr = process.communicate()  
+        else:
+            process = subprocess.Popen(['./scalability.sh', str(params["num_proc"])+ ("  --oversubscribe" if params["over"] else ""), params["path_to_genome"]], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            stdout, stderr = process.communicate()       
+
         
         lines = str(stdout).split("\\n")
-        lines = lines[8:]
-        
+
         self.all_results = {}
 
         first = re.compile("size of the full text: (\\d+) and the size of the pattern: (\\d+)")
@@ -65,9 +69,7 @@ results_list = []
 
 
 # e coli
-
-
-for i in tqdm(range(2,9)):
+for i in tqdm(range(1,9)):
     for g in gene_indeces:
         res = SingleTrial(over=True, num_proc=i, gene_index=g).all_results
         res["genome"] = "e_coli"
@@ -76,10 +78,8 @@ for i in tqdm(range(2,9)):
         results_list.append(res)
 
 
-
 # nostoc punctiforme
-
-for i in tqdm(range(2,9)):
+for i in tqdm(range(1,9)):
     for g in gene_indeces:
         res = SingleTrial(over=True, num_proc=i, gene_index=g, path_to_genome="../../data/NostocPunctiforme/genome.fna").all_results
         res["genome"] = "nostoc"
