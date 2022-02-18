@@ -89,6 +89,15 @@ for i in tqdm(range(1,9)):
         res["num_cores"] = i
         results_list.append(res)
 
+# # honey bee
+# for i in tqdm(range(1,9)):
+#     for g in gene_indeces:
+#         res = SingleTrial(over=over, num_proc=i, gene_index=g, path_to_genome="../../data/NostocPunctiforme/genome.fna").all_results
+#         res["genome"] = "nostoc"
+#         res["gene_index"] = g
+#         res["num_cores"] = i
+#         results_list.append(res)
+
 
 with open("../../presentation/test_results.txt", "w+") as f:
     f.write(json.dumps(results_list))
