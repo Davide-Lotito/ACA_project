@@ -11,7 +11,10 @@ class SingleTrial:
         params.update(kwargs)
         
 
-        self.genes = params["path_to_genome"].replace("genome.fna", "genes.fna")
+        self.genes = params["path_to_genome"].replace("genome", "genes")
+        if os.path.isdir(params["path_to_genome"]):
+            self.genes += ".fna"
+
         with open(self.genes, "r") as f:
             s = f.read()
         self.genes = re.split(">.*\n", s)
@@ -89,14 +92,15 @@ for i in tqdm(range(1,9)):
         res["num_cores"] = i
         results_list.append(res)
 
-# # honey bee
-# for i in tqdm(range(1,9)):
-#     for g in gene_indeces:
-#         res = SingleTrial(over=over, num_proc=i, gene_index=g, path_to_genome="../../data/NostocPunctiforme/genome.fna").all_results
-#         res["genome"] = "nostoc"
-#         res["gene_index"] = g
-#         res["num_cores"] = i
-#         results_list.append(res)
+# honey bee
+gene_indeces = [1, 2, 3]
+for i in tqdm(range(1,9)):
+    for g in gene_indeces:
+        res = SingleTrial(over=over, num_proc=i, gene_index=g, path_to_genome="../../data/ApisMellifera/genome").all_results
+        res["genome"] = "apis"
+        res["gene_index"] = g
+        res["num_cores"] = i
+        results_list.append(res)
 
 
 with open("../../presentation/test_results.txt", "w+") as f:
