@@ -11,7 +11,12 @@ Substring matching with applications to genomics/proteomics.
 
 ## Explanation about the project
 
-All the explanations on the project, the ideas, the arguments are well described (with photos and diagrams) in the jupyer notebook that is attached.
+All the explanations on the project, the ideas, the topics are well described (with photos and diagrams) in the jupyer notebook that is attached. 
+
+```
+/presentation/notebook.ipynb
+```
+
 
 ## Other useful links and resources:
 * <a href="https://en.wikipedia.org/wiki/Genome">List of Genomoes</a>
