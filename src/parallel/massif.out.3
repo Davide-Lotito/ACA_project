@@ -1,0 +1,2843 @@
+desc: --time-unit=ms
+cmd: mpiexec -n 3 ./a.out ../../data/EscherichiaColi/genome.fna ../../data/pat.txt
+time_unit: ms
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=606
+mem_heap_B=8
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=628
+mem_heap_B=1261
+mem_heap_extra_B=507
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=644
+mem_heap_B=162229
+mem_heap_extra_B=1955
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=664
+mem_heap_B=172110
+mem_heap_extra_B=5098
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=679
+mem_heap_B=180480
+mem_heap_extra_B=6992
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=693
+mem_heap_B=197856
+mem_heap_extra_B=10008
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=718
+mem_heap_B=242340
+mem_heap_extra_B=18308
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=743
+mem_heap_B=281217
+mem_heap_extra_B=30839
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=763
+mem_heap_B=292058
+mem_heap_extra_B=33302
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=788
+mem_heap_B=321571
+mem_heap_extra_B=42909
+mem_stacks_B=0
+heap_tree=detailed
+n12: 321571 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 158528 0x492C801: opal_hash_table_init2 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 66272 0x4958E91: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+      n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 66272 0x495C899: mca_base_pvar_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4958EBD: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 17312 0x495FEA1: mca_base_var_group_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 17312 0x4958EB4: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 17312 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 17312 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 8672 0x4956121: mca_base_component_repository_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 8672 0x4957908: mca_base_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 8672 0x4936274: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 8672 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 8672 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 8672 0x4A3B0B2: (below main) (libc-start.c:308)
+ n4: 33618 0x4AB650E: strdup (strdup.c:42)
+  n2: 13453 0x49590F8: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 12045 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 12045 in 93 places, all below massif's threshold (1.00%)
+   n0: 1408 in 1 place, below massif's threshold (1.00%)
+  n0: 8728 in 25 places, all below massif's threshold (1.00%)
+  n2: 6067 0x4965940: make_opt (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 5691 0x4965A1E: opal_cmd_line_add (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 5691 0x48CF999: orte_schizo_base_define_cli (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 5691 0x48873AA: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 5691 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 5691 0x4A3B0B2: (below main) (libc-start.c:308)
+   n0: 376 in 2 places, all below massif's threshold (1.00%)
+  n1: 5370 0x4955CC9: process_repository_item (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 5370 0x497BA7A: dlopen_foreachfile (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 5370 0x4955FF3: mca_base_component_repository_add (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 5370 0x4956137: mca_base_component_repository_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+      n1: 5370 0x4957908: mca_base_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+       n1: 5370 0x4936274: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+        n1: 5370 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+         n1: 5370 0x1093A2: orterun (in /usr/bin/orterun)
+          n0: 5370 0x4A3B0B2: (below main) (libc-start.c:308)
+ n2: 30744 0x495905D: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 29064 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n0: 19656 in 94 places, all below massif's threshold (1.00%)
+   n1: 9408 0x495B131: mca_base_component_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 9408 in 11 places, all below massif's threshold (1.00%)
+  n0: 1680 in 1 place, below massif's threshold (1.00%)
+ n0: 22146 in 65 places, all below massif's threshold (1.00%)
+ n1: 17776 0x4955C6F: process_repository_item (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 17776 0x497BA7A: dlopen_foreachfile (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 17776 0x4955FF3: mca_base_component_repository_add (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 17776 0x4956137: mca_base_component_repository_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 17776 0x4957908: mca_base_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+      n1: 17776 0x4936274: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+       n1: 17776 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 17776 0x1093A2: orterun (in /usr/bin/orterun)
+         n0: 17776 0x4A3B0B2: (below main) (libc-start.c:308)
+ n2: 14000 0x49604DF: group_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 9800 0x4959012: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n2: 9800 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 5320 in 9 places, all below massif's threshold (1.00%)
+    n1: 4480 0x495B131: mca_base_component_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n0: 4480 in 6 places, all below massif's threshold (1.00%)
+  n0: 4200 in 3 places, all below massif's threshold (1.00%)
+ n2: 10752 0x49658AF: make_opt (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 10304 0x4965A1E: opal_cmd_line_add (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 10304 0x48CF999: orte_schizo_base_define_cli (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+    n1: 10304 0x48873AA: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 10304 0x1093A2: orterun (in /usr/bin/orterun)
+      n0: 10304 0x4A3B0B2: (below main) (libc-start.c:308)
+  n0: 448 in 2 places, all below massif's threshold (1.00%)
+ n3: 10186 0x4958C11: mca_base_var_generate_full_name4 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 5187 0x4959152: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 4926 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 4926 in 95 places, all below massif's threshold (1.00%)
+   n0: 261 in 1 place, below massif's threshold (1.00%)
+  n2: 4272 0x495912C: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 4061 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 4061 in 95 places, all below massif's threshold (1.00%)
+   n0: 211 in 1 place, below massif's threshold (1.00%)
+  n0: 727 in 3 places, all below massif's threshold (1.00%)
+ n1: 9881 0x400D273: _dl_new_object (dl-object.c:89)
+  n1: 9881 0x4006E96: _dl_map_object_from_fd (dl-load.c:997)
+   n2: 9881 0x400A61A: _dl_map_object (dl-load.c:2236)
+    n1: 8686 0x4015D36: dl_open_worker (dl-open.c:513)
+     n1: 8686 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+      n1: 8686 0x40155F9: _dl_open (dl-open.c:837)
+       n1: 8686 0x4C3134B: dlopen_doit (dlopen.c:66)
+        n1: 8686 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 8686 0x4B77982: _dl_catch_error (dl-error-skeleton.c:227)
+          n1: 8686 0x4C31B58: _dlerror_run (dlerror.c:170)
+           n1: 8686 0x4C313D9: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+            n1: 8686 0x497BC23: dlopen_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+             n1: 8686 0x49565C3: mca_base_component_repository_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+              n1: 8686 0x495559A: mca_base_component_find (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+               n1: 8686 0x496106D: mca_base_framework_components_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                n1: 8686 0x4961555: mca_base_framework_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                 n2: 8686 0x49615B3: mca_base_framework_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                  n1: 6200 0x488726D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+                   n1: 6200 0x1093A2: orterun (in /usr/bin/orterun)
+                    n0: 6200 0x4A3B0B2: (below main) (libc-start.c:308)
+                  n0: 2486 in 2 places, all below massif's threshold (1.00%)
+    n0: 1195 in 1 place, below massif's threshold (1.00%)
+ n2: 4948 0x492CD9D: opal_hash_table_set_value_ptr (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 4089 0x49591F7: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 3888 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 3888 in 95 places, all below massif's threshold (1.00%)
+   n0: 201 in 1 place, below massif's threshold (1.00%)
+  n0: 859 in 2 places, all below massif's threshold (1.00%)
+ n1: 4896 0x49305BF: opal_pointer_array_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n0: 4896 in 5 places, all below massif's threshold (1.00%)
+ n1: 4096 0x495B79E: mca_base_var_cache_files (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 4096 0x4936196: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 4096 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+    n1: 4096 0x1093A2: orterun (in /usr/bin/orterun)
+     n0: 4096 0x4A3B0B2: (below main) (libc-start.c:308)
+#-----------
+snapshot=11
+#-----------
+time=807
+mem_heap_B=363884
+mem_heap_extra_B=55100
+mem_stacks_B=0
+heap_tree=detailed
+n11: 363884 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 158528 0x492C801: opal_hash_table_init2 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 66272 0x4958E91: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+      n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 66272 0x495C899: mca_base_pvar_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4958EBD: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 17312 0x495FEA1: mca_base_var_group_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 17312 0x4958EB4: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 17312 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 17312 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 8672 0x4956121: mca_base_component_repository_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 8672 0x4957908: mca_base_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 8672 0x4936274: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 8672 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 8672 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 8672 0x4A3B0B2: (below main) (libc-start.c:308)
+ n2: 44688 0x495905D: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 41664 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n0: 27888 in 141 places, all below massif's threshold (1.00%)
+   n1: 13776 0x495B131: mca_base_component_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 13776 in 20 places, all below massif's threshold (1.00%)
+  n0: 3024 in 1 place, below massif's threshold (1.00%)
+ n4: 39256 0x4AB650E: strdup (strdup.c:42)
+  n2: 17571 0x49590F8: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 15626 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 15626 in 140 places, all below massif's threshold (1.00%)
+   n0: 1945 in 1 place, below massif's threshold (1.00%)
+  n0: 10248 in 27 places, all below massif's threshold (1.00%)
+  n2: 6067 0x4965940: make_opt (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 5691 0x4965A1E: opal_cmd_line_add (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 5691 0x48CF999: orte_schizo_base_define_cli (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 5691 0x48873AA: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 5691 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 5691 0x4A3B0B2: (below main) (libc-start.c:308)
+   n0: 376 in 2 places, all below massif's threshold (1.00%)
+  n1: 5370 0x4955CC9: process_repository_item (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 5370 0x497BA7A: dlopen_foreachfile (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 5370 0x4955FF3: mca_base_component_repository_add (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 5370 0x4956137: mca_base_component_repository_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+      n1: 5370 0x4957908: mca_base_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+       n1: 5370 0x4936274: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+        n1: 5370 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+         n1: 5370 0x1093A2: orterun (in /usr/bin/orterun)
+          n0: 5370 0x4A3B0B2: (below main) (libc-start.c:308)
+ n0: 31329 in 66 places, all below massif's threshold (1.00%)
+ n2: 18200 0x49604DF: group_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 13160 0x4959012: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n2: 12320 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 6440 in 12 places, all below massif's threshold (1.00%)
+    n1: 5880 0x495B131: mca_base_component_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n0: 5880 in 8 places, all below massif's threshold (1.00%)
+   n0: 840 in 1 place, below massif's threshold (1.00%)
+  n0: 5040 in 3 places, all below massif's threshold (1.00%)
+ n1: 17776 0x4955C6F: process_repository_item (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 17776 0x497BA7A: dlopen_foreachfile (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 17776 0x4955FF3: mca_base_component_repository_add (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 17776 0x4956137: mca_base_component_repository_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 17776 0x4957908: mca_base_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+      n1: 17776 0x4936274: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+       n1: 17776 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 17776 0x1093A2: orterun (in /usr/bin/orterun)
+         n0: 17776 0x4A3B0B2: (below main) (libc-start.c:308)
+ n1: 17306 0x400D273: _dl_new_object (dl-object.c:89)
+  n1: 17306 0x4006E96: _dl_map_object_from_fd (dl-load.c:997)
+   n2: 17306 0x400A61A: _dl_map_object (dl-load.c:2236)
+    n1: 16111 0x4015D36: dl_open_worker (dl-open.c:513)
+     n1: 16111 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+      n1: 16111 0x40155F9: _dl_open (dl-open.c:837)
+       n1: 16111 0x4C3134B: dlopen_doit (dlopen.c:66)
+        n1: 16111 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 16111 0x4B77982: _dl_catch_error (dl-error-skeleton.c:227)
+          n1: 16111 0x4C31B58: _dlerror_run (dlerror.c:170)
+           n1: 16111 0x4C313D9: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+            n1: 16111 0x497BC23: dlopen_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+             n1: 16111 0x49565C3: mca_base_component_repository_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+              n1: 16111 0x495559A: mca_base_component_find (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+               n1: 16111 0x496106D: mca_base_framework_components_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                n1: 16111 0x4961555: mca_base_framework_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                 n3: 16111 0x49615B3: mca_base_framework_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                  n1: 7425 0x48D7114: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+                   n1: 7425 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+                    n1: 7425 0x1093A2: orterun (in /usr/bin/orterun)
+                     n0: 7425 0x4A3B0B2: (below main) (libc-start.c:308)
+                  n1: 6200 0x488726D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+                   n1: 6200 0x1093A2: orterun (in /usr/bin/orterun)
+                    n0: 6200 0x4A3B0B2: (below main) (libc-start.c:308)
+                  n0: 2486 in 2 places, all below massif's threshold (1.00%)
+    n0: 1195 in 1 place, below massif's threshold (1.00%)
+ n3: 14339 0x4958C11: mca_base_var_generate_full_name4 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 7376 0x4959152: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 6921 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 6921 in 142 places, all below massif's threshold (1.00%)
+   n0: 455 in 1 place, below massif's threshold (1.00%)
+  n2: 6046 0x495912C: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 5681 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 5681 in 142 places, all below massif's threshold (1.00%)
+   n0: 365 in 1 place, below massif's threshold (1.00%)
+  n0: 917 in 3 places, all below massif's threshold (1.00%)
+ n2: 10752 0x49658AF: make_opt (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 10304 0x4965A1E: opal_cmd_line_add (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 10304 0x48CF999: orte_schizo_base_define_cli (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+    n1: 10304 0x48873AA: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 10304 0x1093A2: orterun (in /usr/bin/orterun)
+      n0: 10304 0x4A3B0B2: (below main) (libc-start.c:308)
+  n0: 448 in 2 places, all below massif's threshold (1.00%)
+ n2: 6814 0x492CD9D: opal_hash_table_set_value_ptr (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 5780 0x49591F7: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 5433 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 5433 in 142 places, all below massif's threshold (1.00%)
+   n0: 347 in 1 place, below massif's threshold (1.00%)
+  n0: 1034 in 2 places, all below massif's threshold (1.00%)
+ n1: 4896 0x49305BF: opal_pointer_array_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n0: 4896 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=12
+#-----------
+time=825
+mem_heap_B=367722
+mem_heap_extra_B=56246
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=850
+mem_heap_B=373244
+mem_heap_extra_B=58900
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=865
+mem_heap_B=420660
+mem_heap_extra_B=61060
+mem_stacks_B=0
+heap_tree=detailed
+n13: 420660 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 158528 0x492C801: opal_hash_table_init2 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 66272 0x4958E91: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+      n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 66272 0x495C899: mca_base_pvar_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4958EBD: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 17312 0x495FEA1: mca_base_var_group_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 17312 0x4958EB4: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 17312 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 17312 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 8672 0x4956121: mca_base_component_repository_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 8672 0x4957908: mca_base_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 8672 0x4936274: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 8672 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 8672 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 8672 0x4A3B0B2: (below main) (libc-start.c:308)
+ n0: 48193 in 97 places, all below massif's threshold (1.00%)
+ n2: 44856 0x495905D: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 41832 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n0: 27888 in 141 places, all below massif's threshold (1.00%)
+   n1: 13944 0x495B131: mca_base_component_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 13944 in 20 places, all below massif's threshold (1.00%)
+  n0: 3024 in 1 place, below massif's threshold (1.00%)
+ n4: 41417 0x4AB650E: strdup (strdup.c:42)
+  n2: 17571 0x49590F8: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 15626 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 15626 in 140 places, all below massif's threshold (1.00%)
+   n0: 1945 in 1 place, below massif's threshold (1.00%)
+  n0: 12409 in 32 places, all below massif's threshold (1.00%)
+  n2: 6067 0x4965940: make_opt (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 5691 0x4965A1E: opal_cmd_line_add (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 5691 0x48CF999: orte_schizo_base_define_cli (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 5691 0x48873AA: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 5691 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 5691 0x4A3B0B2: (below main) (libc-start.c:308)
+   n0: 376 in 2 places, all below massif's threshold (1.00%)
+  n1: 5370 0x4955CC9: process_repository_item (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 5370 0x497BA7A: dlopen_foreachfile (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 5370 0x4955FF3: mca_base_component_repository_add (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 5370 0x4956137: mca_base_component_repository_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+      n1: 5370 0x4957908: mca_base_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+       n1: 5370 0x4936274: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+        n1: 5370 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+         n1: 5370 0x1093A2: orterun (in /usr/bin/orterun)
+          n0: 5370 0x4A3B0B2: (below main) (libc-start.c:308)
+ n1: 32816 0x4AF51DA: __alloc_dir (opendir.c:118)
+  n2: 32816 0x4AF58B1: fdopendir (fdopendir.c:50)
+   n1: 32816 0x49A09D3: hwloc_parse_hugepages_info.isra.0 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 32816 0x49A90FB: hwloc_look_linuxfs (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 32816 0x49C13FA: opal_hwloc201_hwloc_topology_load (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+      n1: 32816 0x499016B: opal_hwloc_base_get_topology (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+       n1: 32816 0x51CA6BD: ???
+        n1: 32816 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+         n1: 32816 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 32816 0x1093A2: orterun (in /usr/bin/orterun)
+           n0: 32816 0x4A3B0B2: (below main) (libc-start.c:308)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 18200 0x49604DF: group_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 13160 0x4959012: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n2: 12320 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 6440 in 12 places, all below massif's threshold (1.00%)
+    n1: 5880 0x495B131: mca_base_component_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n0: 5880 in 8 places, all below massif's threshold (1.00%)
+   n0: 840 in 1 place, below massif's threshold (1.00%)
+  n0: 5040 in 3 places, all below massif's threshold (1.00%)
+ n1: 17776 0x4955C6F: process_repository_item (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 17776 0x497BA7A: dlopen_foreachfile (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 17776 0x4955FF3: mca_base_component_repository_add (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 17776 0x4956137: mca_base_component_repository_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 17776 0x4957908: mca_base_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+      n1: 17776 0x4936274: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+       n1: 17776 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 17776 0x1093A2: orterun (in /usr/bin/orterun)
+         n0: 17776 0x4A3B0B2: (below main) (libc-start.c:308)
+ n3: 14392 0x4958C11: mca_base_var_generate_full_name4 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 7405 0x4959152: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 6950 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 6950 in 142 places, all below massif's threshold (1.00%)
+   n0: 455 in 1 place, below massif's threshold (1.00%)
+  n2: 6070 0x495912C: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 5705 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 5705 in 142 places, all below massif's threshold (1.00%)
+   n0: 365 in 1 place, below massif's threshold (1.00%)
+  n0: 917 in 3 places, all below massif's threshold (1.00%)
+ n1: 11117 0x400D273: _dl_new_object (dl-object.c:89)
+  n1: 11117 0x4006E96: _dl_map_object_from_fd (dl-load.c:997)
+   n2: 11117 0x400A61A: _dl_map_object (dl-load.c:2236)
+    n1: 9922 0x4015D36: dl_open_worker (dl-open.c:513)
+     n1: 9922 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+      n1: 9922 0x40155F9: _dl_open (dl-open.c:837)
+       n1: 9922 0x4C3134B: dlopen_doit (dlopen.c:66)
+        n1: 9922 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 9922 0x4B77982: _dl_catch_error (dl-error-skeleton.c:227)
+          n1: 9922 0x4C31B58: _dlerror_run (dlerror.c:170)
+           n1: 9922 0x4C313D9: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+            n1: 9922 0x497BC23: dlopen_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+             n1: 9922 0x49565C3: mca_base_component_repository_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+              n1: 9922 0x495559A: mca_base_component_find (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+               n1: 9922 0x496106D: mca_base_framework_components_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                n1: 9922 0x4961555: mca_base_framework_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                 n2: 9922 0x49615B3: mca_base_framework_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                  n1: 6200 0x488726D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+                   n1: 6200 0x1093A2: orterun (in /usr/bin/orterun)
+                    n0: 6200 0x4A3B0B2: (below main) (libc-start.c:308)
+                  n0: 3722 in 3 places, all below massif's threshold (1.00%)
+    n0: 1195 in 1 place, below massif's threshold (1.00%)
+ n2: 10752 0x49658AF: make_opt (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 10304 0x4965A1E: opal_cmd_line_add (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 10304 0x48CF999: orte_schizo_base_define_cli (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+    n1: 10304 0x48873AA: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 10304 0x1093A2: orterun (in /usr/bin/orterun)
+      n0: 10304 0x4A3B0B2: (below main) (libc-start.c:308)
+  n0: 448 in 2 places, all below massif's threshold (1.00%)
+ n1: 10664 0x49BE201: opal_hwloc201_hwloc_alloc_setup_object (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n0: 10664 in 5 places, all below massif's threshold (1.00%)
+ n2: 6837 0x492CD9D: opal_hash_table_set_value_ptr (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 5803 0x49591F7: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 5456 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 5456 in 142 places, all below massif's threshold (1.00%)
+   n0: 347 in 1 place, below massif's threshold (1.00%)
+  n0: 1034 in 2 places, all below massif's threshold (1.00%)
+ n1: 5112 0x4930459: grow_table (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n0: 5112 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=15
+#-----------
+time=892
+mem_heap_B=429751
+mem_heap_extra_B=63129
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=909
+mem_heap_B=398422
+mem_heap_extra_B=63650
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=925
+mem_heap_B=416169
+mem_heap_extra_B=68295
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=948
+mem_heap_B=442409
+mem_heap_extra_B=75855
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=974
+mem_heap_B=1124935
+mem_heap_extra_B=78193
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=989
+mem_heap_B=1216459
+mem_heap_extra_B=79061
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=1004
+mem_heap_B=1231452
+mem_heap_extra_B=84412
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=1023
+mem_heap_B=1339561
+mem_heap_extra_B=87615
+mem_stacks_B=0
+heap_tree=detailed
+n13: 1339561 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 589824 0x492D883: opal_hotel_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 589824 0x488D1F0: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+   n1: 589824 0x51C99E5: ???
+    n1: 589824 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 589824 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 589824 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 589824 0x4A3B0B2: (below main) (libc-start.c:308)
+ n4: 158528 0x492C801: opal_hash_table_init2 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 66272 0x4958E91: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+      n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 66272 0x495C899: mca_base_pvar_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4958EBD: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 17312 0x495FEA1: mca_base_var_group_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 17312 0x4958EB4: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 17312 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 17312 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+  n0: 8672 in 1 place, below massif's threshold (1.00%)
+ n0: 148928 in 168 places, all below massif's threshold (1.00%)
+ n3: 92256 0x5243531: ???
+  n1: 66272 0x52CC2B9: ???
+   n1: 66272 0x52A807C: ???
+    n1: 66272 0x52883BD: ???
+     n1: 66272 0x52390E8: ???
+      n1: 66272 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+       n1: 66272 0x51C99E5: ???
+        n1: 66272 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+         n1: 66272 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+           n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 17312 0x52CF289: ???
+   n1: 17312 0x52CC304: ???
+    n1: 17312 0x52A807C: ???
+     n1: 17312 0x52883BD: ???
+      n1: 17312 0x52390E8: ???
+       n1: 17312 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 17312 0x51C99E5: ???
+         n1: 17312 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 17312 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+           n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+            n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+  n0: 8672 in 1 place, below massif's threshold (1.00%)
+ n1: 73728 0x5243F52: ???
+  n1: 73728 0x52A82A9: ???
+   n1: 73728 0x52883BD: ???
+    n1: 73728 0x52390E8: ???
+     n1: 73728 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 73728 0x51C99E5: ???
+       n1: 73728 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 73728 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+         n1: 73728 0x1093A2: orterun (in /usr/bin/orterun)
+          n0: 73728 0x4A3B0B2: (below main) (libc-start.c:308)
+ n1: 65536 0x492D898: opal_hotel_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 65536 0x488D1F0: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+   n1: 65536 0x51C99E5: ???
+    n1: 65536 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 65536 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 65536 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 65536 0x4A3B0B2: (below main) (libc-start.c:308)
+ n2: 59472 0x495905D: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 55944 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n0: 30408 in 145 places, all below massif's threshold (1.00%)
+   n1: 25536 0x495B131: mca_base_component_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 25536 in 44 places, all below massif's threshold (1.00%)
+  n0: 3528 in 1 place, below massif's threshold (1.00%)
+ n2: 51772 0x4AB650E: strdup (strdup.c:42)
+  n0: 31407 in 72 places, all below massif's threshold (1.00%)
+  n2: 20365 0x49590F8: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 18084 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 18084 in 144 places, all below massif's threshold (1.00%)
+   n0: 2281 in 1 place, below massif's threshold (1.00%)
+ n2: 24920 0x49604DF: group_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 18760 0x4959012: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 17640 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 17640 in 13 places, all below massif's threshold (1.00%)
+   n0: 1120 in 1 place, below massif's threshold (1.00%)
+  n0: 6160 in 3 places, all below massif's threshold (1.00%)
+ n1: 21062 0x400D273: _dl_new_object (dl-object.c:89)
+  n1: 21062 0x4006E96: _dl_map_object_from_fd (dl-load.c:997)
+   n2: 21062 0x400A61A: _dl_map_object (dl-load.c:2236)
+    n1: 19867 0x4015D36: dl_open_worker (dl-open.c:513)
+     n1: 19867 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+      n1: 19867 0x40155F9: _dl_open (dl-open.c:837)
+       n1: 19867 0x4C3134B: dlopen_doit (dlopen.c:66)
+        n1: 19867 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 19867 0x4B77982: _dl_catch_error (dl-error-skeleton.c:227)
+          n1: 19867 0x4C31B58: _dlerror_run (dlerror.c:170)
+           n1: 19867 0x4C313D9: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+            n1: 19867 0x497BC23: dlopen_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+             n1: 19867 0x49565C3: mca_base_component_repository_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+              n1: 19867 0x495559A: mca_base_component_find (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+               n1: 19867 0x496106D: mca_base_framework_components_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                n1: 19867 0x4961555: mca_base_framework_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                 n1: 19867 0x49615B3: mca_base_framework_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                  n0: 19867 in 9 places, all below massif's threshold (1.00%)
+    n0: 1195 in 1 place, below massif's threshold (1.00%)
+ n1: 19375 0x4958C11: mca_base_var_generate_full_name4 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n0: 19375 in 5 places, all below massif's threshold (1.00%)
+ n1: 17776 0x4955C6F: process_repository_item (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 17776 0x497BA7A: dlopen_foreachfile (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 17776 0x4955FF3: mca_base_component_repository_add (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 17776 0x4956137: mca_base_component_repository_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 17776 0x4957908: mca_base_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+      n1: 17776 0x4936274: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+       n1: 17776 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 17776 0x1093A2: orterun (in /usr/bin/orterun)
+         n0: 17776 0x4A3B0B2: (below main) (libc-start.c:308)
+ n1: 16384 0x492D8AB: opal_hotel_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 16384 0x488D1F0: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+   n1: 16384 0x51C99E5: ???
+    n1: 16384 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 16384 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 16384 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 16384 0x4A3B0B2: (below main) (libc-start.c:308)
+#-----------
+snapshot=23
+#-----------
+time=1048
+mem_heap_B=1364170
+mem_heap_extra_B=93094
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=1064
+mem_heap_B=1371080
+mem_heap_extra_B=94888
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=1085
+mem_heap_B=1394683
+mem_heap_extra_B=101517
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=1098
+mem_heap_B=1411819
+mem_heap_extra_B=105229
+mem_stacks_B=0
+heap_tree=detailed
+n14: 1411819 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 589824 0x492D883: opal_hotel_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 589824 0x488D1F0: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+   n1: 589824 0x51C99E5: ???
+    n1: 589824 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 589824 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 589824 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 589824 0x4A3B0B2: (below main) (libc-start.c:308)
+ n0: 176426 in 362 places, all below massif's threshold (1.00%)
+ n4: 158528 0x492C801: opal_hash_table_init2 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 66272 0x4958E91: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+      n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 66272 0x495C899: mca_base_pvar_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4958EBD: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 17312 0x495FEA1: mca_base_var_group_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 17312 0x4958EB4: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 17312 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 17312 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+  n0: 8672 in 1 place, below massif's threshold (1.00%)
+ n3: 92256 0x5243531: ???
+  n1: 66272 0x52CC2B9: ???
+   n1: 66272 0x52A807C: ???
+    n1: 66272 0x52883BD: ???
+     n1: 66272 0x52390E8: ???
+      n1: 66272 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+       n1: 66272 0x51C99E5: ???
+        n1: 66272 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+         n1: 66272 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+           n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 17312 0x52CF289: ???
+   n1: 17312 0x52CC304: ???
+    n1: 17312 0x52A807C: ???
+     n1: 17312 0x52883BD: ???
+      n1: 17312 0x52390E8: ???
+       n1: 17312 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 17312 0x51C99E5: ???
+         n1: 17312 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 17312 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+           n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+            n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+  n0: 8672 in 1 place, below massif's threshold (1.00%)
+ n1: 73728 0x5243F52: ???
+  n1: 73728 0x52A82A9: ???
+   n1: 73728 0x52883BD: ???
+    n1: 73728 0x52390E8: ???
+     n1: 73728 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 73728 0x51C99E5: ???
+       n1: 73728 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 73728 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+         n1: 73728 0x1093A2: orterun (in /usr/bin/orterun)
+          n0: 73728 0x4A3B0B2: (below main) (libc-start.c:308)
+ n1: 65536 0x492D898: opal_hotel_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 65536 0x488D1F0: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+   n1: 65536 0x51C99E5: ???
+    n1: 65536 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 65536 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 65536 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 65536 0x4A3B0B2: (below main) (libc-start.c:308)
+ n2: 59472 0x495905D: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 55944 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n0: 30408 in 145 places, all below massif's threshold (1.00%)
+   n1: 25536 0x495B131: mca_base_component_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 25536 in 44 places, all below massif's threshold (1.00%)
+  n0: 3528 in 1 place, below massif's threshold (1.00%)
+ n2: 57918 0x4AB650E: strdup (strdup.c:42)
+  n0: 37553 in 252 places, all below massif's threshold (1.00%)
+  n2: 20365 0x49590F8: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 18084 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 18084 in 144 places, all below massif's threshold (1.00%)
+   n0: 2281 in 1 place, below massif's threshold (1.00%)
+ n1: 38340 0x400D273: _dl_new_object (dl-object.c:89)
+  n1: 38340 0x4006E96: _dl_map_object_from_fd (dl-load.c:997)
+   n2: 38340 0x400A61A: _dl_map_object (dl-load.c:2236)
+    n1: 35935 0x4015D36: dl_open_worker (dl-open.c:513)
+     n1: 35935 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+      n1: 35935 0x40155F9: _dl_open (dl-open.c:837)
+       n1: 35935 0x4C3134B: dlopen_doit (dlopen.c:66)
+        n1: 35935 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 35935 0x4B77982: _dl_catch_error (dl-error-skeleton.c:227)
+          n1: 35935 0x4C31B58: _dlerror_run (dlerror.c:170)
+           n2: 35935 0x4C313D9: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+            n1: 19867 0x497BC23: dlopen_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+             n1: 19867 0x49565C3: mca_base_component_repository_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+              n1: 19867 0x495559A: mca_base_component_find (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+               n1: 19867 0x496106D: mca_base_framework_components_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                n1: 19867 0x4961555: mca_base_framework_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                 n1: 19867 0x49615B3: mca_base_framework_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                  n0: 19867 in 9 places, all below massif's threshold (1.00%)
+            n1: 16068 0x52E0C04: ???
+             n1: 16068 0x52C793D: ???
+              n1: 16068 0x52C699A: ???
+               n1: 16068 0x52C85CD: ???
+                n1: 16068 0x52C8DED: ???
+                 n1: 16068 0x52C8E53: ???
+                  n0: 16068 in 6 places, all below massif's threshold (1.00%)
+    n0: 2405 in 1 place, below massif's threshold (1.00%)
+ n2: 24920 0x49604DF: group_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 18760 0x4959012: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 17640 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 17640 in 13 places, all below massif's threshold (1.00%)
+   n0: 1120 in 1 place, below massif's threshold (1.00%)
+  n0: 6160 in 3 places, all below massif's threshold (1.00%)
+ n2: 21336 0x52CC641: ???
+  n1: 20496 0x52CD07A: ???
+   n0: 20496 in 50 places, all below massif's threshold (1.00%)
+  n0: 840 in 1 place, below massif's threshold (1.00%)
+ n1: 19375 0x4958C11: mca_base_var_generate_full_name4 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n0: 19375 in 5 places, all below massif's threshold (1.00%)
+ n1: 17776 0x4955C6F: process_repository_item (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 17776 0x497BA7A: dlopen_foreachfile (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 17776 0x4955FF3: mca_base_component_repository_add (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 17776 0x4956137: mca_base_component_repository_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 17776 0x4957908: mca_base_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+      n1: 17776 0x4936274: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+       n1: 17776 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 17776 0x1093A2: orterun (in /usr/bin/orterun)
+         n0: 17776 0x4A3B0B2: (below main) (libc-start.c:308)
+ n1: 16384 0x492D8AB: opal_hotel_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 16384 0x488D1F0: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+   n1: 16384 0x51C99E5: ???
+    n1: 16384 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 16384 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 16384 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 16384 0x4A3B0B2: (below main) (libc-start.c:308)
+#-----------
+snapshot=27
+#-----------
+time=1119
+mem_heap_B=1435634
+mem_heap_extra_B=111022
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=1131
+mem_heap_B=1445012
+mem_heap_extra_B=113492
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=1146
+mem_heap_B=1499148
+mem_heap_extra_B=113740
+mem_stacks_B=0
+heap_tree=detailed
+n14: 1499148 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 589824 0x492D883: opal_hotel_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 589824 0x488D1F0: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+   n1: 589824 0x51C99E5: ???
+    n1: 589824 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 589824 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 589824 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 589824 0x4A3B0B2: (below main) (libc-start.c:308)
+ n0: 193247 in 379 places, all below massif's threshold (1.00%)
+ n4: 158528 0x492C801: opal_hash_table_init2 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 66272 0x4958E91: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+      n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 66272 0x495C899: mca_base_pvar_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4958EBD: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 17312 0x495FEA1: mca_base_var_group_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 17312 0x4958EB4: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 17312 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 17312 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+  n0: 8672 in 1 place, below massif's threshold (1.00%)
+ n6: 144192 0x5243531: ???
+  n1: 66272 0x52CC2B9: ???
+   n1: 66272 0x52A807C: ???
+    n1: 66272 0x52883BD: ???
+     n1: 66272 0x52390E8: ???
+      n1: 66272 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+       n1: 66272 0x51C99E5: ???
+        n1: 66272 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+         n1: 66272 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+           n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 17312 0x52CF289: ???
+   n1: 17312 0x52CC304: ???
+    n1: 17312 0x52A807C: ???
+     n1: 17312 0x52883BD: ???
+      n1: 17312 0x52390E8: ???
+       n1: 17312 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 17312 0x51C99E5: ???
+         n1: 17312 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 17312 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+           n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+            n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 17312 0x5394BEE: ???
+   n1: 17312 0x5395958: ???
+    n1: 17312 0x5398C1F: ???
+     n1: 17312 0x536C969: ???
+      n1: 17312 0x52EADC9: ???
+       n1: 17312 0x5288F2D: ???
+        n1: 17312 0x52390E8: ???
+         n1: 17312 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 17312 0x51C99E5: ???
+           n1: 17312 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+            n1: 17312 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+             n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+              n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 17312 0x5394C4E: ???
+   n1: 17312 0x5395958: ???
+    n1: 17312 0x5398C1F: ???
+     n1: 17312 0x536C969: ???
+      n1: 17312 0x52EADC9: ???
+       n1: 17312 0x5288F2D: ???
+        n1: 17312 0x52390E8: ???
+         n1: 17312 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 17312 0x51C99E5: ???
+           n1: 17312 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+            n1: 17312 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+             n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+              n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 17312 0x5394CAE: ???
+   n1: 17312 0x5395958: ???
+    n1: 17312 0x5398C1F: ???
+     n1: 17312 0x536C969: ???
+      n1: 17312 0x52EADC9: ???
+       n1: 17312 0x5288F2D: ???
+        n1: 17312 0x52390E8: ???
+         n1: 17312 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 17312 0x51C99E5: ???
+           n1: 17312 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+            n1: 17312 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+             n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+              n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+  n0: 8672 in 1 place, below massif's threshold (1.00%)
+ n1: 73728 0x5243F52: ???
+  n1: 73728 0x52A82A9: ???
+   n1: 73728 0x52883BD: ???
+    n1: 73728 0x52390E8: ???
+     n1: 73728 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 73728 0x51C99E5: ???
+       n1: 73728 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 73728 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+         n1: 73728 0x1093A2: orterun (in /usr/bin/orterun)
+          n0: 73728 0x4A3B0B2: (below main) (libc-start.c:308)
+ n1: 65536 0x492D898: opal_hotel_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 65536 0x488D1F0: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+   n1: 65536 0x51C99E5: ???
+    n1: 65536 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 65536 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 65536 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 65536 0x4A3B0B2: (below main) (libc-start.c:308)
+ n2: 60430 0x4AB650E: strdup (strdup.c:42)
+  n0: 40065 in 262 places, all below massif's threshold (1.00%)
+  n2: 20365 0x49590F8: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 18084 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 18084 in 144 places, all below massif's threshold (1.00%)
+   n0: 2281 in 1 place, below massif's threshold (1.00%)
+ n2: 59472 0x495905D: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 55944 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n0: 30408 in 145 places, all below massif's threshold (1.00%)
+   n1: 25536 0x495B131: mca_base_component_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 25536 in 44 places, all below massif's threshold (1.00%)
+  n0: 3528 in 1 place, below massif's threshold (1.00%)
+ n1: 47008 0x400D273: _dl_new_object (dl-object.c:89)
+  n1: 47008 0x4006E96: _dl_map_object_from_fd (dl-load.c:997)
+   n2: 47008 0x400A61A: _dl_map_object (dl-load.c:2236)
+    n1: 44603 0x4015D36: dl_open_worker (dl-open.c:513)
+     n1: 44603 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+      n1: 44603 0x40155F9: _dl_open (dl-open.c:837)
+       n1: 44603 0x4C3134B: dlopen_doit (dlopen.c:66)
+        n1: 44603 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 44603 0x4B77982: _dl_catch_error (dl-error-skeleton.c:227)
+          n1: 44603 0x4C31B58: _dlerror_run (dlerror.c:170)
+           n2: 44603 0x4C313D9: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+            n1: 24736 0x52E0C04: ???
+             n1: 24736 0x52C793D: ???
+              n1: 24736 0x52C699A: ???
+               n1: 24736 0x52C85CD: ???
+                n1: 24736 0x52C8DED: ???
+                 n1: 24736 0x52C8E53: ???
+                  n0: 24736 in 9 places, all below massif's threshold (1.00%)
+            n1: 19867 0x497BC23: dlopen_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+             n1: 19867 0x49565C3: mca_base_component_repository_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+              n1: 19867 0x495559A: mca_base_component_find (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+               n1: 19867 0x496106D: mca_base_framework_components_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                n1: 19867 0x4961555: mca_base_framework_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                 n1: 19867 0x49615B3: mca_base_framework_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                  n0: 19867 in 9 places, all below massif's threshold (1.00%)
+    n0: 2405 in 1 place, below massif's threshold (1.00%)
+ n2: 28728 0x52CC641: ???
+  n1: 27888 0x52CD07A: ???
+   n0: 27888 in 52 places, all below massif's threshold (1.00%)
+  n0: 840 in 1 place, below massif's threshold (1.00%)
+ n2: 24920 0x49604DF: group_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 18760 0x4959012: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 17640 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 17640 in 13 places, all below massif's threshold (1.00%)
+   n0: 1120 in 1 place, below massif's threshold (1.00%)
+  n0: 6160 in 3 places, all below massif's threshold (1.00%)
+ n1: 19375 0x4958C11: mca_base_var_generate_full_name4 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n0: 19375 in 5 places, all below massif's threshold (1.00%)
+ n1: 17776 0x4955C6F: process_repository_item (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 17776 0x497BA7A: dlopen_foreachfile (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 17776 0x4955FF3: mca_base_component_repository_add (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 17776 0x4956137: mca_base_component_repository_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 17776 0x4957908: mca_base_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+      n1: 17776 0x4936274: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+       n1: 17776 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 17776 0x1093A2: orterun (in /usr/bin/orterun)
+         n0: 17776 0x4A3B0B2: (below main) (libc-start.c:308)
+ n1: 16384 0x492D8AB: opal_hotel_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 16384 0x488D1F0: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+   n1: 16384 0x51C99E5: ???
+    n1: 16384 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 16384 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 16384 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 16384 0x4A3B0B2: (below main) (libc-start.c:308)
+#-----------
+snapshot=30
+#-----------
+time=1168
+mem_heap_B=1530076
+mem_heap_extra_B=118980
+mem_stacks_B=0
+heap_tree=detailed
+n13: 1530076 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 589824 0x492D883: opal_hotel_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 589824 0x488D1F0: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+   n1: 589824 0x51C99E5: ???
+    n1: 589824 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 589824 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 589824 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 589824 0x4A3B0B2: (below main) (libc-start.c:308)
+ n0: 211724 in 389 places, all below massif's threshold (1.00%)
+ n4: 170112 0x492C801: opal_hash_table_init2 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 66272 0x4958E91: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+      n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 66272 0x495C899: mca_base_pvar_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4958EBD: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n0: 20256 in 3 places, all below massif's threshold (1.00%)
+  n1: 17312 0x495FEA1: mca_base_var_group_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 17312 0x4958EB4: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 17312 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 17312 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+ n6: 144192 0x5243531: ???
+  n1: 66272 0x52CC2B9: ???
+   n1: 66272 0x52A807C: ???
+    n1: 66272 0x52883BD: ???
+     n1: 66272 0x52390E8: ???
+      n1: 66272 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+       n1: 66272 0x51C99E5: ???
+        n1: 66272 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+         n1: 66272 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+           n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 17312 0x52CF289: ???
+   n1: 17312 0x52CC304: ???
+    n1: 17312 0x52A807C: ???
+     n1: 17312 0x52883BD: ???
+      n1: 17312 0x52390E8: ???
+       n1: 17312 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 17312 0x51C99E5: ???
+         n1: 17312 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 17312 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+           n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+            n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 17312 0x5394BEE: ???
+   n1: 17312 0x5395958: ???
+    n1: 17312 0x5398C1F: ???
+     n1: 17312 0x536C969: ???
+      n1: 17312 0x52EADC9: ???
+       n1: 17312 0x5288F2D: ???
+        n1: 17312 0x52390E8: ???
+         n1: 17312 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 17312 0x51C99E5: ???
+           n1: 17312 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+            n1: 17312 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+             n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+              n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 17312 0x5394C4E: ???
+   n1: 17312 0x5395958: ???
+    n1: 17312 0x5398C1F: ???
+     n1: 17312 0x536C969: ???
+      n1: 17312 0x52EADC9: ???
+       n1: 17312 0x5288F2D: ???
+        n1: 17312 0x52390E8: ???
+         n1: 17312 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 17312 0x51C99E5: ???
+           n1: 17312 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+            n1: 17312 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+             n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+              n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 17312 0x5394CAE: ???
+   n1: 17312 0x5395958: ???
+    n1: 17312 0x5398C1F: ???
+     n1: 17312 0x536C969: ???
+      n1: 17312 0x52EADC9: ???
+       n1: 17312 0x5288F2D: ???
+        n1: 17312 0x52390E8: ???
+         n1: 17312 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 17312 0x51C99E5: ???
+           n1: 17312 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+            n1: 17312 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+             n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+              n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+  n0: 8672 in 1 place, below massif's threshold (1.00%)
+ n1: 73728 0x5243F52: ???
+  n1: 73728 0x52A82A9: ???
+   n1: 73728 0x52883BD: ???
+    n1: 73728 0x52390E8: ???
+     n1: 73728 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 73728 0x51C99E5: ???
+       n1: 73728 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 73728 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+         n1: 73728 0x1093A2: orterun (in /usr/bin/orterun)
+          n0: 73728 0x4A3B0B2: (below main) (libc-start.c:308)
+ n1: 65536 0x492D898: opal_hotel_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 65536 0x488D1F0: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+   n1: 65536 0x51C99E5: ???
+    n1: 65536 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 65536 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 65536 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 65536 0x4A3B0B2: (below main) (libc-start.c:308)
+ n2: 65016 0x495905D: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 61152 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n0: 31080 in 145 places, all below massif's threshold (1.00%)
+   n1: 30072 0x495B131: mca_base_component_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 30072 in 59 places, all below massif's threshold (1.00%)
+  n0: 3864 in 1 place, below massif's threshold (1.00%)
+ n2: 63167 0x4AB650E: strdup (strdup.c:42)
+  n0: 40589 in 263 places, all below massif's threshold (1.00%)
+  n2: 22578 0x49590F8: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 19816 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 19816 in 144 places, all below massif's threshold (1.00%)
+   n0: 2762 in 1 place, below massif's threshold (1.00%)
+ n1: 51971 0x400D273: _dl_new_object (dl-object.c:89)
+  n1: 51971 0x4006E96: _dl_map_object_from_fd (dl-load.c:997)
+   n2: 51971 0x400A61A: _dl_map_object (dl-load.c:2236)
+    n1: 49566 0x4015D36: dl_open_worker (dl-open.c:513)
+     n1: 49566 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+      n1: 49566 0x40155F9: _dl_open (dl-open.c:837)
+       n1: 49566 0x4C3134B: dlopen_doit (dlopen.c:66)
+        n1: 49566 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 49566 0x4B77982: _dl_catch_error (dl-error-skeleton.c:227)
+          n1: 49566 0x4C31B58: _dlerror_run (dlerror.c:170)
+           n2: 49566 0x4C313D9: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+            n1: 24830 0x497BC23: dlopen_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+             n1: 24830 0x49565C3: mca_base_component_repository_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+              n1: 24830 0x495559A: mca_base_component_find (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+               n1: 24830 0x496106D: mca_base_framework_components_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                n1: 24830 0x4961555: mca_base_framework_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                 n1: 24830 0x49615B3: mca_base_framework_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                  n0: 24830 in 11 places, all below massif's threshold (1.00%)
+            n1: 24736 0x52E0C04: ???
+             n1: 24736 0x52C793D: ???
+              n1: 24736 0x52C699A: ???
+               n1: 24736 0x52C85CD: ???
+                n1: 24736 0x52C8DED: ???
+                 n1: 24736 0x52C8E53: ???
+                  n0: 24736 in 9 places, all below massif's threshold (1.00%)
+    n0: 2405 in 1 place, below massif's threshold (1.00%)
+ n2: 28728 0x52CC641: ???
+  n1: 27888 0x52CD07A: ???
+   n0: 27888 in 52 places, all below massif's threshold (1.00%)
+  n0: 840 in 1 place, below massif's threshold (1.00%)
+ n2: 27160 0x49604DF: group_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 20440 0x4959012: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 19320 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 19320 in 13 places, all below massif's threshold (1.00%)
+   n0: 1120 in 1 place, below massif's threshold (1.00%)
+  n0: 6720 in 3 places, all below massif's threshold (1.00%)
+ n1: 21142 0x4958C11: mca_base_var_generate_full_name4 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n0: 21142 in 6 places, all below massif's threshold (1.00%)
+ n1: 17776 0x4955C6F: process_repository_item (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 17776 0x497BA7A: dlopen_foreachfile (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 17776 0x4955FF3: mca_base_component_repository_add (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 17776 0x4956137: mca_base_component_repository_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 17776 0x4957908: mca_base_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+      n1: 17776 0x4936274: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+       n1: 17776 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 17776 0x1093A2: orterun (in /usr/bin/orterun)
+         n0: 17776 0x4A3B0B2: (below main) (libc-start.c:308)
+#-----------
+snapshot=31
+#-----------
+time=1188
+mem_heap_B=1552473
+mem_heap_extra_B=122359
+mem_stacks_B=0
+heap_tree=detailed
+n13: 1552473 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 589824 0x492D883: opal_hotel_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 589824 0x488D1F0: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+   n1: 589824 0x51C99E5: ???
+    n1: 589824 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 589824 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 589824 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 589824 0x4A3B0B2: (below main) (libc-start.c:308)
+ n0: 217328 in 398 places, all below massif's threshold (1.00%)
+ n4: 178784 0x492C801: opal_hash_table_init2 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 66272 0x4958E91: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+      n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 66272 0x495C899: mca_base_pvar_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4958EBD: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n0: 28928 in 4 places, all below massif's threshold (1.00%)
+  n1: 17312 0x495FEA1: mca_base_var_group_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 17312 0x4958EB4: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 17312 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 17312 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+ n6: 144192 0x5243531: ???
+  n1: 66272 0x52CC2B9: ???
+   n1: 66272 0x52A807C: ???
+    n1: 66272 0x52883BD: ???
+     n1: 66272 0x52390E8: ???
+      n1: 66272 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+       n1: 66272 0x51C99E5: ???
+        n1: 66272 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+         n1: 66272 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+           n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 17312 0x52CF289: ???
+   n1: 17312 0x52CC304: ???
+    n1: 17312 0x52A807C: ???
+     n1: 17312 0x52883BD: ???
+      n1: 17312 0x52390E8: ???
+       n1: 17312 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 17312 0x51C99E5: ???
+         n1: 17312 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 17312 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+           n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+            n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 17312 0x5394BEE: ???
+   n1: 17312 0x5395958: ???
+    n1: 17312 0x5398C1F: ???
+     n1: 17312 0x536C969: ???
+      n1: 17312 0x52EADC9: ???
+       n1: 17312 0x5288F2D: ???
+        n1: 17312 0x52390E8: ???
+         n1: 17312 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 17312 0x51C99E5: ???
+           n1: 17312 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+            n1: 17312 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+             n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+              n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 17312 0x5394C4E: ???
+   n1: 17312 0x5395958: ???
+    n1: 17312 0x5398C1F: ???
+     n1: 17312 0x536C969: ???
+      n1: 17312 0x52EADC9: ???
+       n1: 17312 0x5288F2D: ???
+        n1: 17312 0x52390E8: ???
+         n1: 17312 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 17312 0x51C99E5: ???
+           n1: 17312 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+            n1: 17312 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+             n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+              n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 17312 0x5394CAE: ???
+   n1: 17312 0x5395958: ???
+    n1: 17312 0x5398C1F: ???
+     n1: 17312 0x536C969: ???
+      n1: 17312 0x52EADC9: ???
+       n1: 17312 0x5288F2D: ???
+        n1: 17312 0x52390E8: ???
+         n1: 17312 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 17312 0x51C99E5: ???
+           n1: 17312 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+            n1: 17312 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+             n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+              n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+  n0: 8672 in 1 place, below massif's threshold (1.00%)
+ n1: 73728 0x5243F52: ???
+  n1: 73728 0x52A82A9: ???
+   n1: 73728 0x52883BD: ???
+    n1: 73728 0x52390E8: ???
+     n1: 73728 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 73728 0x51C99E5: ???
+       n1: 73728 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 73728 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+         n1: 73728 0x1093A2: orterun (in /usr/bin/orterun)
+          n0: 73728 0x4A3B0B2: (below main) (libc-start.c:308)
+ n2: 67200 0x495905D: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 63336 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n0: 32088 in 147 places, all below massif's threshold (1.00%)
+   n1: 31248 0x495B131: mca_base_component_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 31248 in 60 places, all below massif's threshold (1.00%)
+  n0: 3864 in 1 place, below massif's threshold (1.00%)
+ n1: 65536 0x492D898: opal_hotel_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 65536 0x488D1F0: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+   n1: 65536 0x51C99E5: ???
+    n1: 65536 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 65536 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 65536 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 65536 0x4A3B0B2: (below main) (libc-start.c:308)
+ n2: 63943 0x4AB650E: strdup (strdup.c:42)
+  n0: 40919 in 267 places, all below massif's threshold (1.00%)
+  n2: 23024 0x49590F8: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 20262 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 20262 in 146 places, all below massif's threshold (1.00%)
+   n0: 2762 in 1 place, below massif's threshold (1.00%)
+ n1: 54450 0x400D273: _dl_new_object (dl-object.c:89)
+  n1: 54450 0x4006E96: _dl_map_object_from_fd (dl-load.c:997)
+   n2: 54450 0x400A61A: _dl_map_object (dl-load.c:2236)
+    n1: 52045 0x4015D36: dl_open_worker (dl-open.c:513)
+     n1: 52045 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+      n1: 52045 0x40155F9: _dl_open (dl-open.c:837)
+       n1: 52045 0x4C3134B: dlopen_doit (dlopen.c:66)
+        n1: 52045 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 52045 0x4B77982: _dl_catch_error (dl-error-skeleton.c:227)
+          n1: 52045 0x4C31B58: _dlerror_run (dlerror.c:170)
+           n2: 52045 0x4C313D9: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+            n1: 27309 0x497BC23: dlopen_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+             n1: 27309 0x49565C3: mca_base_component_repository_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+              n1: 27309 0x495559A: mca_base_component_find (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+               n1: 27309 0x496106D: mca_base_framework_components_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                n1: 27309 0x4961555: mca_base_framework_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                 n1: 27309 0x49615B3: mca_base_framework_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                  n0: 27309 in 13 places, all below massif's threshold (1.00%)
+            n1: 24736 0x52E0C04: ???
+             n1: 24736 0x52C793D: ???
+              n1: 24736 0x52C699A: ???
+               n1: 24736 0x52C85CD: ???
+                n1: 24736 0x52C8DED: ???
+                 n1: 24736 0x52C8E53: ???
+                  n0: 24736 in 9 places, all below massif's threshold (1.00%)
+    n0: 2405 in 1 place, below massif's threshold (1.00%)
+ n2: 29120 0x49604DF: group_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 21840 0x4959012: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 20720 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 20720 in 14 places, all below massif's threshold (1.00%)
+   n0: 1120 in 1 place, below massif's threshold (1.00%)
+  n0: 7280 in 3 places, all below massif's threshold (1.00%)
+ n2: 28728 0x52CC641: ???
+  n1: 27888 0x52CD07A: ???
+   n0: 27888 in 52 places, all below massif's threshold (1.00%)
+  n0: 840 in 1 place, below massif's threshold (1.00%)
+ n1: 21864 0x4958C11: mca_base_var_generate_full_name4 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n0: 21864 in 6 places, all below massif's threshold (1.00%)
+ n1: 17776 0x4955C6F: process_repository_item (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 17776 0x497BA7A: dlopen_foreachfile (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 17776 0x4955FF3: mca_base_component_repository_add (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 17776 0x4956137: mca_base_component_repository_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 17776 0x4957908: mca_base_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+      n1: 17776 0x4936274: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+       n1: 17776 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 17776 0x1093A2: orterun (in /usr/bin/orterun)
+         n0: 17776 0x4A3B0B2: (below main) (libc-start.c:308)
+#-----------
+snapshot=32
+#-----------
+time=1203
+mem_heap_B=1567677
+mem_heap_extra_B=124075
+mem_stacks_B=0
+heap_tree=detailed
+n13: 1567677 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 589824 0x492D883: opal_hotel_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 589824 0x488D1F0: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+   n1: 589824 0x51C99E5: ???
+    n1: 589824 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 589824 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 589824 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 589824 0x4A3B0B2: (below main) (libc-start.c:308)
+ n0: 222724 in 412 places, all below massif's threshold (1.00%)
+ n4: 187456 0x492C801: opal_hash_table_init2 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 66272 0x4958E91: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+      n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 66272 0x495C899: mca_base_pvar_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4958EBD: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n0: 37600 in 5 places, all below massif's threshold (1.00%)
+  n1: 17312 0x495FEA1: mca_base_var_group_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 17312 0x4958EB4: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 17312 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 17312 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+ n6: 144192 0x5243531: ???
+  n1: 66272 0x52CC2B9: ???
+   n1: 66272 0x52A807C: ???
+    n1: 66272 0x52883BD: ???
+     n1: 66272 0x52390E8: ???
+      n1: 66272 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+       n1: 66272 0x51C99E5: ???
+        n1: 66272 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+         n1: 66272 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+           n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 17312 0x52CF289: ???
+   n1: 17312 0x52CC304: ???
+    n1: 17312 0x52A807C: ???
+     n1: 17312 0x52883BD: ???
+      n1: 17312 0x52390E8: ???
+       n1: 17312 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 17312 0x51C99E5: ???
+         n1: 17312 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 17312 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+           n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+            n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 17312 0x5394BEE: ???
+   n1: 17312 0x5395958: ???
+    n1: 17312 0x5398C1F: ???
+     n1: 17312 0x536C969: ???
+      n1: 17312 0x52EADC9: ???
+       n1: 17312 0x5288F2D: ???
+        n1: 17312 0x52390E8: ???
+         n1: 17312 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 17312 0x51C99E5: ???
+           n1: 17312 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+            n1: 17312 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+             n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+              n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 17312 0x5394C4E: ???
+   n1: 17312 0x5395958: ???
+    n1: 17312 0x5398C1F: ???
+     n1: 17312 0x536C969: ???
+      n1: 17312 0x52EADC9: ???
+       n1: 17312 0x5288F2D: ???
+        n1: 17312 0x52390E8: ???
+         n1: 17312 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 17312 0x51C99E5: ???
+           n1: 17312 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+            n1: 17312 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+             n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+              n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 17312 0x5394CAE: ???
+   n1: 17312 0x5395958: ???
+    n1: 17312 0x5398C1F: ???
+     n1: 17312 0x536C969: ???
+      n1: 17312 0x52EADC9: ???
+       n1: 17312 0x5288F2D: ???
+        n1: 17312 0x52390E8: ???
+         n1: 17312 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 17312 0x51C99E5: ???
+           n1: 17312 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+            n1: 17312 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+             n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+              n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+  n0: 8672 in 1 place, below massif's threshold (1.00%)
+ n1: 73728 0x5243F52: ???
+  n1: 73728 0x52A82A9: ???
+   n1: 73728 0x52883BD: ???
+    n1: 73728 0x52390E8: ???
+     n1: 73728 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 73728 0x51C99E5: ???
+       n1: 73728 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 73728 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+         n1: 73728 0x1093A2: orterun (in /usr/bin/orterun)
+          n0: 73728 0x4A3B0B2: (below main) (libc-start.c:308)
+ n2: 68376 0x495905D: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 64512 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n0: 32760 in 149 places, all below massif's threshold (1.00%)
+   n1: 31752 0x495B131: mca_base_component_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 31752 in 63 places, all below massif's threshold (1.00%)
+  n0: 3864 in 1 place, below massif's threshold (1.00%)
+ n1: 65536 0x492D898: opal_hotel_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 65536 0x488D1F0: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+   n1: 65536 0x51C99E5: ???
+    n1: 65536 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 65536 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 65536 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 65536 0x4A3B0B2: (below main) (libc-start.c:308)
+ n2: 64564 0x4AB650E: strdup (strdup.c:42)
+  n0: 41151 in 272 places, all below massif's threshold (1.00%)
+  n2: 23413 0x49590F8: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 20651 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 20651 in 148 places, all below massif's threshold (1.00%)
+   n0: 2762 in 1 place, below massif's threshold (1.00%)
+ n1: 53186 0x400D273: _dl_new_object (dl-object.c:89)
+  n1: 53186 0x4006E96: _dl_map_object_from_fd (dl-load.c:997)
+   n2: 53186 0x400A61A: _dl_map_object (dl-load.c:2236)
+    n1: 50781 0x4015D36: dl_open_worker (dl-open.c:513)
+     n1: 50781 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+      n1: 50781 0x40155F9: _dl_open (dl-open.c:837)
+       n1: 50781 0x4C3134B: dlopen_doit (dlopen.c:66)
+        n1: 50781 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 50781 0x4B77982: _dl_catch_error (dl-error-skeleton.c:227)
+          n1: 50781 0x4C31B58: _dlerror_run (dlerror.c:170)
+           n2: 50781 0x4C313D9: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+            n1: 26045 0x497BC23: dlopen_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+             n1: 26045 0x49565C3: mca_base_component_repository_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+              n1: 26045 0x495559A: mca_base_component_find (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+               n1: 26045 0x496106D: mca_base_framework_components_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                n1: 26045 0x4961555: mca_base_framework_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                 n1: 26045 0x49615B3: mca_base_framework_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                  n0: 26045 in 14 places, all below massif's threshold (1.00%)
+            n1: 24736 0x52E0C04: ???
+             n1: 24736 0x52C793D: ???
+              n1: 24736 0x52C699A: ???
+               n1: 24736 0x52C85CD: ???
+                n1: 24736 0x52C8DED: ???
+                 n1: 24736 0x52C8E53: ???
+                  n0: 24736 in 9 places, all below massif's threshold (1.00%)
+    n0: 2405 in 1 place, below massif's threshold (1.00%)
+ n2: 29400 0x49604DF: group_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 22120 0x4959012: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 21000 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 21000 in 14 places, all below massif's threshold (1.00%)
+   n0: 1120 in 1 place, below massif's threshold (1.00%)
+  n0: 7280 in 3 places, all below massif's threshold (1.00%)
+ n2: 28728 0x52CC641: ???
+  n1: 27888 0x52CD07A: ???
+   n0: 27888 in 52 places, all below massif's threshold (1.00%)
+  n0: 840 in 1 place, below massif's threshold (1.00%)
+ n1: 22187 0x4958C11: mca_base_var_generate_full_name4 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n0: 22187 in 6 places, all below massif's threshold (1.00%)
+ n1: 17776 0x4955C6F: process_repository_item (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 17776 0x497BA7A: dlopen_foreachfile (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 17776 0x4955FF3: mca_base_component_repository_add (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 17776 0x4956137: mca_base_component_repository_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 17776 0x4957908: mca_base_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+      n1: 17776 0x4936274: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+       n1: 17776 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 17776 0x1093A2: orterun (in /usr/bin/orterun)
+         n0: 17776 0x4A3B0B2: (below main) (libc-start.c:308)
+#-----------
+snapshot=33
+#-----------
+time=1220
+mem_heap_B=1594685
+mem_heap_extra_B=131595
+mem_stacks_B=0
+heap_tree=detailed
+n13: 1594685 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 589824 0x492D883: opal_hotel_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 589824 0x488D1F0: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+   n1: 589824 0x51C99E5: ???
+    n1: 589824 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 589824 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 589824 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 589824 0x4A3B0B2: (below main) (libc-start.c:308)
+ n0: 226549 in 412 places, all below massif's threshold (1.00%)
+ n4: 187456 0x492C801: opal_hash_table_init2 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 66272 0x4958E91: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+      n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 66272 0x495C899: mca_base_pvar_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4958EBD: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n0: 37600 in 5 places, all below massif's threshold (1.00%)
+  n1: 17312 0x495FEA1: mca_base_var_group_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 17312 0x4958EB4: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 17312 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 17312 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+ n6: 144192 0x5243531: ???
+  n1: 66272 0x52CC2B9: ???
+   n1: 66272 0x52A807C: ???
+    n1: 66272 0x52883BD: ???
+     n1: 66272 0x52390E8: ???
+      n1: 66272 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+       n1: 66272 0x51C99E5: ???
+        n1: 66272 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+         n1: 66272 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+           n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 17312 0x52CF289: ???
+   n1: 17312 0x52CC304: ???
+    n1: 17312 0x52A807C: ???
+     n1: 17312 0x52883BD: ???
+      n1: 17312 0x52390E8: ???
+       n1: 17312 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 17312 0x51C99E5: ???
+         n1: 17312 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 17312 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+           n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+            n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 17312 0x5394BEE: ???
+   n1: 17312 0x5395958: ???
+    n1: 17312 0x5398C1F: ???
+     n1: 17312 0x536C969: ???
+      n1: 17312 0x52EADC9: ???
+       n1: 17312 0x5288F2D: ???
+        n1: 17312 0x52390E8: ???
+         n1: 17312 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 17312 0x51C99E5: ???
+           n1: 17312 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+            n1: 17312 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+             n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+              n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 17312 0x5394C4E: ???
+   n1: 17312 0x5395958: ???
+    n1: 17312 0x5398C1F: ???
+     n1: 17312 0x536C969: ???
+      n1: 17312 0x52EADC9: ???
+       n1: 17312 0x5288F2D: ???
+        n1: 17312 0x52390E8: ???
+         n1: 17312 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 17312 0x51C99E5: ???
+           n1: 17312 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+            n1: 17312 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+             n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+              n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 17312 0x5394CAE: ???
+   n1: 17312 0x5395958: ???
+    n1: 17312 0x5398C1F: ???
+     n1: 17312 0x536C969: ???
+      n1: 17312 0x52EADC9: ???
+       n1: 17312 0x5288F2D: ???
+        n1: 17312 0x52390E8: ???
+         n1: 17312 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 17312 0x51C99E5: ???
+           n1: 17312 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+            n1: 17312 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+             n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+              n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+  n0: 8672 in 1 place, below massif's threshold (1.00%)
+ n2: 77616 0x495905D: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 72576 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n0: 36456 in 169 places, all below massif's threshold (1.00%)
+   n1: 36120 0x495B131: mca_base_component_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 36120 in 77 places, all below massif's threshold (1.00%)
+  n0: 5040 in 1 place, below massif's threshold (1.00%)
+ n1: 73728 0x5243F52: ???
+  n1: 73728 0x52A82A9: ???
+   n1: 73728 0x52883BD: ???
+    n1: 73728 0x52390E8: ???
+     n1: 73728 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 73728 0x51C99E5: ???
+       n1: 73728 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 73728 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+         n1: 73728 0x1093A2: orterun (in /usr/bin/orterun)
+          n0: 73728 0x4A3B0B2: (below main) (libc-start.c:308)
+ n2: 68554 0x4AB650E: strdup (strdup.c:42)
+  n0: 41965 in 272 places, all below massif's threshold (1.00%)
+  n2: 26589 0x49590F8: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 23317 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 23317 in 168 places, all below massif's threshold (1.00%)
+   n0: 3272 in 1 place, below massif's threshold (1.00%)
+ n1: 65536 0x492D898: opal_hotel_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 65536 0x488D1F0: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+   n1: 65536 0x51C99E5: ???
+    n1: 65536 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 65536 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 65536 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 65536 0x4A3B0B2: (below main) (libc-start.c:308)
+ n1: 58158 0x400D273: _dl_new_object (dl-object.c:89)
+  n1: 58158 0x4006E96: _dl_map_object_from_fd (dl-load.c:997)
+   n2: 58158 0x400A61A: _dl_map_object (dl-load.c:2236)
+    n1: 55753 0x4015D36: dl_open_worker (dl-open.c:513)
+     n1: 55753 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+      n1: 55753 0x40155F9: _dl_open (dl-open.c:837)
+       n1: 55753 0x4C3134B: dlopen_doit (dlopen.c:66)
+        n1: 55753 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 55753 0x4B77982: _dl_catch_error (dl-error-skeleton.c:227)
+          n1: 55753 0x4C31B58: _dlerror_run (dlerror.c:170)
+           n2: 55753 0x4C313D9: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+            n1: 31017 0x497BC23: dlopen_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+             n1: 31017 0x49565C3: mca_base_component_repository_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+              n1: 31017 0x495559A: mca_base_component_find (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+               n1: 31017 0x496106D: mca_base_framework_components_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                n1: 31017 0x4961555: mca_base_framework_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                 n1: 31017 0x49615B3: mca_base_framework_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                  n0: 31017 in 15 places, all below massif's threshold (1.00%)
+            n1: 24736 0x52E0C04: ???
+             n1: 24736 0x52C793D: ???
+              n1: 24736 0x52C699A: ???
+               n1: 24736 0x52C85CD: ???
+                n1: 24736 0x52C8DED: ???
+                 n1: 24736 0x52C8E53: ???
+                  n0: 24736 in 9 places, all below massif's threshold (1.00%)
+    n0: 2405 in 1 place, below massif's threshold (1.00%)
+ n2: 31360 0x49604DF: group_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 23800 0x4959012: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 22400 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 22400 in 14 places, all below massif's threshold (1.00%)
+   n0: 1400 in 1 place, below massif's threshold (1.00%)
+  n0: 7560 in 3 places, all below massif's threshold (1.00%)
+ n2: 28728 0x52CC641: ???
+  n1: 27888 0x52CD07A: ???
+   n0: 27888 in 52 places, all below massif's threshold (1.00%)
+  n0: 840 in 1 place, below massif's threshold (1.00%)
+ n1: 25208 0x4958C11: mca_base_var_generate_full_name4 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n0: 25208 in 6 places, all below massif's threshold (1.00%)
+ n1: 17776 0x4955C6F: process_repository_item (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 17776 0x497BA7A: dlopen_foreachfile (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 17776 0x4955FF3: mca_base_component_repository_add (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 17776 0x4956137: mca_base_component_repository_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 17776 0x4957908: mca_base_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+      n1: 17776 0x4936274: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+       n1: 17776 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 17776 0x1093A2: orterun (in /usr/bin/orterun)
+         n0: 17776 0x4A3B0B2: (below main) (libc-start.c:308)
+#-----------
+snapshot=34
+#-----------
+time=1235
+mem_heap_B=1616530
+mem_heap_extra_B=137366
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=1247
+mem_heap_B=1653979
+mem_heap_extra_B=147205
+mem_stacks_B=0
+heap_tree=detailed
+n12: 1653979 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 589824 0x492D883: opal_hotel_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 589824 0x488D1F0: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+   n1: 589824 0x51C99E5: ???
+    n1: 589824 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 589824 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 589824 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 589824 0x4A3B0B2: (below main) (libc-start.c:308)
+ n0: 281972 in 441 places, all below massif's threshold (1.00%)
+ n3: 188448 0x492C801: opal_hash_table_init2 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 66272 0x4958E91: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+      n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 66272 0x495C899: mca_base_pvar_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4958EBD: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n0: 55904 in 7 places, all below massif's threshold (1.00%)
+ n2: 144192 0x5243531: ???
+  n0: 77920 in 5 places, all below massif's threshold (1.00%)
+  n1: 66272 0x52CC2B9: ???
+   n1: 66272 0x52A807C: ???
+    n1: 66272 0x52883BD: ???
+     n1: 66272 0x52390E8: ???
+      n1: 66272 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+       n1: 66272 0x51C99E5: ???
+        n1: 66272 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+         n1: 66272 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+           n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+ n2: 85680 0x495905D: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 80640 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 42336 0x495B131: mca_base_component_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 42336 in 84 places, all below massif's threshold (1.00%)
+   n0: 38304 in 174 places, all below massif's threshold (1.00%)
+  n0: 5040 in 1 place, below massif's threshold (1.00%)
+ n1: 73728 0x5243F52: ???
+  n1: 73728 0x52A82A9: ???
+   n1: 73728 0x52883BD: ???
+    n1: 73728 0x52390E8: ???
+     n1: 73728 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 73728 0x51C99E5: ???
+       n1: 73728 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 73728 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+         n1: 73728 0x1093A2: orterun (in /usr/bin/orterun)
+          n0: 73728 0x4A3B0B2: (below main) (libc-start.c:308)
+ n2: 70712 0x4AB650E: strdup (strdup.c:42)
+  n0: 42905 in 273 places, all below massif's threshold (1.00%)
+  n2: 27807 0x49590F8: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 24535 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 24535 in 173 places, all below massif's threshold (1.00%)
+   n0: 3272 in 1 place, below massif's threshold (1.00%)
+ n1: 65536 0x492D898: opal_hotel_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 65536 0x488D1F0: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+   n1: 65536 0x51C99E5: ???
+    n1: 65536 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 65536 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 65536 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 65536 0x4A3B0B2: (below main) (libc-start.c:308)
+ n1: 61874 0x400D273: _dl_new_object (dl-object.c:89)
+  n1: 61874 0x4006E96: _dl_map_object_from_fd (dl-load.c:997)
+   n2: 61874 0x400A61A: _dl_map_object (dl-load.c:2236)
+    n1: 59469 0x4015D36: dl_open_worker (dl-open.c:513)
+     n1: 59469 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+      n1: 59469 0x40155F9: _dl_open (dl-open.c:837)
+       n1: 59469 0x4C3134B: dlopen_doit (dlopen.c:66)
+        n1: 59469 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 59469 0x4B77982: _dl_catch_error (dl-error-skeleton.c:227)
+          n1: 59469 0x4C31B58: _dlerror_run (dlerror.c:170)
+           n2: 59469 0x4C313D9: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+            n1: 34733 0x497BC23: dlopen_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+             n1: 34733 0x49565C3: mca_base_component_repository_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+              n1: 34733 0x495559A: mca_base_component_find (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+               n1: 34733 0x496106D: mca_base_framework_components_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                n1: 34733 0x4961555: mca_base_framework_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                 n1: 34733 0x49615B3: mca_base_framework_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                  n0: 34733 in 18 places, all below massif's threshold (1.00%)
+            n1: 24736 0x52E0C04: ???
+             n1: 24736 0x52C793D: ???
+              n1: 24736 0x52C699A: ???
+               n1: 24736 0x52C85CD: ???
+                n1: 24736 0x52C8DED: ???
+                 n1: 24736 0x52C8E53: ???
+                  n0: 24736 in 9 places, all below massif's threshold (1.00%)
+    n0: 2405 in 1 place, below massif's threshold (1.00%)
+ n2: 35280 0x49604DF: group_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 26880 0x4959012: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 25480 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 25480 in 14 places, all below massif's threshold (1.00%)
+   n0: 1400 in 1 place, below massif's threshold (1.00%)
+  n0: 8400 in 3 places, all below massif's threshold (1.00%)
+ n2: 28728 0x52CC641: ???
+  n1: 27888 0x52CD07A: ???
+   n0: 27888 in 52 places, all below massif's threshold (1.00%)
+  n0: 840 in 1 place, below massif's threshold (1.00%)
+ n1: 28005 0x4958C11: mca_base_var_generate_full_name4 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n0: 28005 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=36
+#-----------
+time=1263
+mem_heap_B=1632712
+mem_heap_extra_B=141168
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=1279
+mem_heap_B=1642880
+mem_heap_extra_B=143896
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=1295
+mem_heap_B=1640845
+mem_heap_extra_B=143707
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=1320
+mem_heap_B=1643601
+mem_heap_extra_B=143935
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=1336
+mem_heap_B=1644886
+mem_heap_extra_B=144138
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=1352
+mem_heap_B=1646103
+mem_heap_extra_B=144713
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=1368
+mem_heap_B=1654119
+mem_heap_extra_B=146617
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=1381
+mem_heap_B=1749024
+mem_heap_extra_B=146768
+mem_stacks_B=0
+heap_tree=detailed
+n12: 1749024 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 589824 0x492D883: opal_hotel_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 589824 0x488D1F0: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+   n1: 589824 0x51C99E5: ???
+    n1: 589824 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 589824 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 589824 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 589824 0x4A3B0B2: (below main) (libc-start.c:308)
+ n0: 312178 in 547 places, all below massif's threshold (1.00%)
+ n5: 196128 0x5243531: ???
+  n1: 66272 0x52CC2B9: ???
+   n1: 66272 0x52A807C: ???
+    n1: 66272 0x52883BD: ???
+     n1: 66272 0x52390E8: ???
+      n1: 66272 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+       n1: 66272 0x51C99E5: ???
+        n1: 66272 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+         n1: 66272 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+           n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 34624 0x5394BEE: ???
+   n1: 34624 0x5395958: ???
+    n0: 34624 in 2 places, all below massif's threshold (1.00%)
+  n1: 34624 0x5394C4E: ???
+   n1: 34624 0x5395958: ???
+    n0: 34624 in 2 places, all below massif's threshold (1.00%)
+  n1: 34624 0x5394CAE: ???
+   n1: 34624 0x5395958: ???
+    n0: 34624 in 2 places, all below massif's threshold (1.00%)
+  n0: 25984 in 2 places, all below massif's threshold (1.00%)
+ n3: 187456 0x492C801: opal_hash_table_init2 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 66272 0x4958E91: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+      n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 66272 0x495C899: mca_base_pvar_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4958EBD: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n0: 54912 in 7 places, all below massif's threshold (1.00%)
+ n2: 88872 0x495905D: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 83832 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 44520 0x495B131: mca_base_component_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 44520 in 85 places, all below massif's threshold (1.00%)
+   n0: 39312 in 176 places, all below massif's threshold (1.00%)
+  n0: 5040 in 1 place, below massif's threshold (1.00%)
+ n2: 75643 0x4AB650E: strdup (strdup.c:42)
+  n0: 47297 in 332 places, all below massif's threshold (1.00%)
+  n2: 28346 0x49590F8: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 25074 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 25074 in 175 places, all below massif's threshold (1.00%)
+   n0: 3272 in 1 place, below massif's threshold (1.00%)
+ n1: 73728 0x5243F52: ???
+  n1: 73728 0x52A82A9: ???
+   n1: 73728 0x52883BD: ???
+    n1: 73728 0x52390E8: ???
+     n1: 73728 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 73728 0x51C99E5: ???
+       n1: 73728 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 73728 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+         n1: 73728 0x1093A2: orterun (in /usr/bin/orterun)
+          n0: 73728 0x4A3B0B2: (below main) (libc-start.c:308)
+ n1: 65536 0x492D898: opal_hotel_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 65536 0x488D1F0: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+   n1: 65536 0x51C99E5: ???
+    n1: 65536 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 65536 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 65536 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 65536 0x4A3B0B2: (below main) (libc-start.c:308)
+ n1: 64348 0x400D273: _dl_new_object (dl-object.c:89)
+  n1: 64348 0x4006E96: _dl_map_object_from_fd (dl-load.c:997)
+   n2: 64348 0x400A61A: _dl_map_object (dl-load.c:2236)
+    n1: 61943 0x4015D36: dl_open_worker (dl-open.c:513)
+     n1: 61943 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+      n1: 61943 0x40155F9: _dl_open (dl-open.c:837)
+       n1: 61943 0x4C3134B: dlopen_doit (dlopen.c:66)
+        n1: 61943 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 61943 0x4B77982: _dl_catch_error (dl-error-skeleton.c:227)
+          n1: 61943 0x4C31B58: _dlerror_run (dlerror.c:170)
+           n2: 61943 0x4C313D9: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+            n1: 37207 0x497BC23: dlopen_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+             n1: 37207 0x49565C3: mca_base_component_repository_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+              n1: 37207 0x495559A: mca_base_component_find (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+               n1: 37207 0x496106D: mca_base_framework_components_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                n1: 37207 0x4961555: mca_base_framework_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                 n1: 37207 0x49615B3: mca_base_framework_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                  n0: 37207 in 20 places, all below massif's threshold (1.00%)
+            n1: 24736 0x52E0C04: ???
+             n1: 24736 0x52C793D: ???
+              n1: 24736 0x52C699A: ???
+               n1: 24736 0x52C85CD: ???
+                n1: 24736 0x52C8DED: ???
+                 n1: 24736 0x52C8E53: ???
+                  n0: 24736 in 9 places, all below massif's threshold (1.00%)
+    n0: 2405 in 1 place, below massif's threshold (1.00%)
+ n2: 37520 0x49604DF: group_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 28560 0x4959012: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 27160 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 27160 in 14 places, all below massif's threshold (1.00%)
+   n0: 1400 in 1 place, below massif's threshold (1.00%)
+  n0: 8960 in 3 places, all below massif's threshold (1.00%)
+ n1: 29063 0x4958C11: mca_base_var_generate_full_name4 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n0: 29063 in 6 places, all below massif's threshold (1.00%)
+ n2: 28728 0x52CC641: ???
+  n1: 27888 0x52CD07A: ???
+   n0: 27888 in 52 places, all below massif's threshold (1.00%)
+  n0: 840 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=44
+#-----------
+time=1398
+mem_heap_B=1732018
+mem_heap_extra_B=147598
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=1417
+mem_heap_B=1731232
+mem_heap_extra_B=148736
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=1428
+mem_heap_B=1733396
+mem_heap_extra_B=149356
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=1444
+mem_heap_B=1741604
+mem_heap_extra_B=151036
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=1461
+mem_heap_B=1741877
+mem_heap_extra_B=151123
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=1486
+mem_heap_B=1744591
+mem_heap_extra_B=151265
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=1493
+mem_heap_B=1764617
+mem_heap_extra_B=152655
+mem_stacks_B=0
+heap_tree=detailed
+n12: 1764617 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 589824 0x492D883: opal_hotel_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 589824 0x488D1F0: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+   n1: 589824 0x51C99E5: ???
+    n1: 589824 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 589824 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 589824 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 589824 0x4A3B0B2: (below main) (libc-start.c:308)
+ n0: 318202 in 626 places, all below massif's threshold (1.00%)
+ n5: 196128 0x5243531: ???
+  n1: 66272 0x52CC2B9: ???
+   n1: 66272 0x52A807C: ???
+    n1: 66272 0x52883BD: ???
+     n1: 66272 0x52390E8: ???
+      n1: 66272 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+       n1: 66272 0x51C99E5: ???
+        n1: 66272 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+         n1: 66272 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+           n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 34624 0x5394BEE: ???
+   n1: 34624 0x5395958: ???
+    n0: 34624 in 2 places, all below massif's threshold (1.00%)
+  n1: 34624 0x5394C4E: ???
+   n1: 34624 0x5395958: ???
+    n0: 34624 in 2 places, all below massif's threshold (1.00%)
+  n1: 34624 0x5394CAE: ???
+   n1: 34624 0x5395958: ???
+    n0: 34624 in 2 places, all below massif's threshold (1.00%)
+  n0: 25984 in 2 places, all below massif's threshold (1.00%)
+ n3: 187456 0x492C801: opal_hash_table_init2 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 66272 0x4958E91: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+      n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 66272 0x495C899: mca_base_pvar_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4958EBD: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n0: 54912 in 7 places, all below massif's threshold (1.00%)
+ n2: 88872 0x495905D: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 83832 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 44520 0x495B131: mca_base_component_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 44520 in 85 places, all below massif's threshold (1.00%)
+   n0: 39312 in 176 places, all below massif's threshold (1.00%)
+  n0: 5040 in 1 place, below massif's threshold (1.00%)
+ n2: 84010 0x4AB650E: strdup (strdup.c:42)
+  n0: 55664 in 361 places, all below massif's threshold (1.00%)
+  n2: 28346 0x49590F8: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 25074 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 25074 in 175 places, all below massif's threshold (1.00%)
+   n0: 3272 in 1 place, below massif's threshold (1.00%)
+ n1: 73728 0x5243F52: ???
+  n1: 73728 0x52A82A9: ???
+   n1: 73728 0x52883BD: ???
+    n1: 73728 0x52390E8: ???
+     n1: 73728 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 73728 0x51C99E5: ???
+       n1: 73728 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 73728 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+         n1: 73728 0x1093A2: orterun (in /usr/bin/orterun)
+          n0: 73728 0x4A3B0B2: (below main) (libc-start.c:308)
+ n1: 65550 0x400D273: _dl_new_object (dl-object.c:89)
+  n1: 65550 0x4006E96: _dl_map_object_from_fd (dl-load.c:997)
+   n2: 65550 0x400A61A: _dl_map_object (dl-load.c:2236)
+    n1: 63145 0x4015D36: dl_open_worker (dl-open.c:513)
+     n1: 63145 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+      n2: 63145 0x40155F9: _dl_open (dl-open.c:837)
+       n1: 61943 0x4C3134B: dlopen_doit (dlopen.c:66)
+        n1: 61943 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 61943 0x4B77982: _dl_catch_error (dl-error-skeleton.c:227)
+          n1: 61943 0x4C31B58: _dlerror_run (dlerror.c:170)
+           n2: 61943 0x4C313D9: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+            n1: 37207 0x497BC23: dlopen_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+             n1: 37207 0x49565C3: mca_base_component_repository_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+              n1: 37207 0x495559A: mca_base_component_find (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+               n1: 37207 0x496106D: mca_base_framework_components_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                n1: 37207 0x4961555: mca_base_framework_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                 n1: 37207 0x49615B3: mca_base_framework_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                  n0: 37207 in 20 places, all below massif's threshold (1.00%)
+            n1: 24736 0x52E0C04: ???
+             n1: 24736 0x52C793D: ???
+              n1: 24736 0x52C699A: ???
+               n1: 24736 0x52C85CD: ???
+                n1: 24736 0x52C8DED: ???
+                 n1: 24736 0x52C8E53: ???
+                  n0: 24736 in 9 places, all below massif's threshold (1.00%)
+       n0: 1202 in 1 place, below massif's threshold (1.00%)
+    n0: 2405 in 1 place, below massif's threshold (1.00%)
+ n1: 65536 0x492D898: opal_hotel_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 65536 0x488D1F0: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+   n1: 65536 0x51C99E5: ???
+    n1: 65536 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 65536 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 65536 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 65536 0x4A3B0B2: (below main) (libc-start.c:308)
+ n2: 37520 0x49604DF: group_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 28560 0x4959012: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 27160 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 27160 in 14 places, all below massif's threshold (1.00%)
+   n0: 1400 in 1 place, below massif's threshold (1.00%)
+  n0: 8960 in 3 places, all below massif's threshold (1.00%)
+ n1: 29063 0x4958C11: mca_base_var_generate_full_name4 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n0: 29063 in 6 places, all below massif's threshold (1.00%)
+ n2: 28728 0x52CC641: ???
+  n1: 27888 0x52CD07A: ???
+   n0: 27888 in 52 places, all below massif's threshold (1.00%)
+  n0: 840 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=51
+#-----------
+time=1504
+mem_heap_B=1771966
+mem_heap_extra_B=152794
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=1515
+mem_heap_B=1776118
+mem_heap_extra_B=152810
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=1529
+mem_heap_B=1770825
+mem_heap_extra_B=151351
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=1542
+mem_heap_B=1770881
+mem_heap_extra_B=151367
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=1553
+mem_heap_B=1768462
+mem_heap_extra_B=151210
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=1564
+mem_heap_B=1748936
+mem_heap_extra_B=150120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=1618
+mem_heap_B=1749373
+mem_heap_extra_B=150315
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=1629
+mem_heap_B=1754520
+mem_heap_extra_B=150576
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=1642
+mem_heap_B=1758687
+mem_heap_extra_B=150793
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=1677
+mem_heap_B=1758747
+mem_heap_extra_B=150813
+mem_stacks_B=0
+heap_tree=detailed
+n12: 1758747 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 589824 0x492D883: opal_hotel_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 589824 0x488D1F0: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+   n1: 589824 0x51C99E5: ???
+    n1: 589824 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 589824 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 589824 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 589824 0x4A3B0B2: (below main) (libc-start.c:308)
+ n0: 317098 in 672 places, all below massif's threshold (1.00%)
+ n5: 196128 0x5243531: ???
+  n1: 66272 0x52CC2B9: ???
+   n1: 66272 0x52A807C: ???
+    n1: 66272 0x52883BD: ???
+     n1: 66272 0x52390E8: ???
+      n1: 66272 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+       n1: 66272 0x51C99E5: ???
+        n1: 66272 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+         n1: 66272 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+           n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 34624 0x5394BEE: ???
+   n1: 34624 0x5395958: ???
+    n0: 34624 in 2 places, all below massif's threshold (1.00%)
+  n1: 34624 0x5394C4E: ???
+   n1: 34624 0x5395958: ???
+    n0: 34624 in 2 places, all below massif's threshold (1.00%)
+  n1: 34624 0x5394CAE: ???
+   n1: 34624 0x5395958: ???
+    n0: 34624 in 2 places, all below massif's threshold (1.00%)
+  n0: 25984 in 2 places, all below massif's threshold (1.00%)
+ n3: 187456 0x492C801: opal_hash_table_init2 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 66272 0x4958E91: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+      n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 66272 0x495C899: mca_base_pvar_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4958EBD: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n0: 54912 in 7 places, all below massif's threshold (1.00%)
+ n2: 88872 0x495905D: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 83832 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 44520 0x495B131: mca_base_component_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 44520 in 85 places, all below massif's threshold (1.00%)
+   n0: 39312 in 176 places, all below massif's threshold (1.00%)
+  n0: 5040 in 1 place, below massif's threshold (1.00%)
+ n2: 79244 0x4AB650E: strdup (strdup.c:42)
+  n0: 50898 in 366 places, all below massif's threshold (1.00%)
+  n2: 28346 0x49590F8: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 25074 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 25074 in 175 places, all below massif's threshold (1.00%)
+   n0: 3272 in 1 place, below massif's threshold (1.00%)
+ n1: 73728 0x5243F52: ???
+  n1: 73728 0x52A82A9: ???
+   n1: 73728 0x52883BD: ???
+    n1: 73728 0x52390E8: ???
+     n1: 73728 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 73728 0x51C99E5: ???
+       n1: 73728 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 73728 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+         n1: 73728 0x1093A2: orterun (in /usr/bin/orterun)
+          n0: 73728 0x4A3B0B2: (below main) (libc-start.c:308)
+ n1: 65550 0x400D273: _dl_new_object (dl-object.c:89)
+  n1: 65550 0x4006E96: _dl_map_object_from_fd (dl-load.c:997)
+   n2: 65550 0x400A61A: _dl_map_object (dl-load.c:2236)
+    n1: 63145 0x4015D36: dl_open_worker (dl-open.c:513)
+     n1: 63145 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+      n2: 63145 0x40155F9: _dl_open (dl-open.c:837)
+       n1: 61943 0x4C3134B: dlopen_doit (dlopen.c:66)
+        n1: 61943 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 61943 0x4B77982: _dl_catch_error (dl-error-skeleton.c:227)
+          n1: 61943 0x4C31B58: _dlerror_run (dlerror.c:170)
+           n2: 61943 0x4C313D9: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+            n1: 37207 0x497BC23: dlopen_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+             n1: 37207 0x49565C3: mca_base_component_repository_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+              n1: 37207 0x495559A: mca_base_component_find (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+               n1: 37207 0x496106D: mca_base_framework_components_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                n1: 37207 0x4961555: mca_base_framework_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                 n1: 37207 0x49615B3: mca_base_framework_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                  n0: 37207 in 20 places, all below massif's threshold (1.00%)
+            n1: 24736 0x52E0C04: ???
+             n1: 24736 0x52C793D: ???
+              n1: 24736 0x52C699A: ???
+               n1: 24736 0x52C85CD: ???
+                n1: 24736 0x52C8DED: ???
+                 n1: 24736 0x52C8E53: ???
+                  n0: 24736 in 9 places, all below massif's threshold (1.00%)
+       n0: 1202 in 1 place, below massif's threshold (1.00%)
+    n0: 2405 in 1 place, below massif's threshold (1.00%)
+ n1: 65536 0x492D898: opal_hotel_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 65536 0x488D1F0: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+   n1: 65536 0x51C99E5: ???
+    n1: 65536 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 65536 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 65536 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 65536 0x4A3B0B2: (below main) (libc-start.c:308)
+ n2: 37520 0x49604DF: group_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 28560 0x4959012: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 27160 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 27160 in 14 places, all below massif's threshold (1.00%)
+   n0: 1400 in 1 place, below massif's threshold (1.00%)
+  n0: 8960 in 3 places, all below massif's threshold (1.00%)
+ n1: 29063 0x4958C11: mca_base_var_generate_full_name4 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n0: 29063 in 6 places, all below massif's threshold (1.00%)
+ n2: 28728 0x52CC641: ???
+  n1: 27888 0x52CD07A: ???
+   n0: 27888 in 52 places, all below massif's threshold (1.00%)
+  n0: 840 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=61
+#-----------
+time=1691
+mem_heap_B=1758747
+mem_heap_extra_B=150813
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=1711
+mem_heap_B=1758775
+mem_heap_extra_B=150825
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=1755
+mem_heap_B=1758775
+mem_heap_extra_B=150825
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=1770
+mem_heap_B=1758775
+mem_heap_extra_B=150825
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=1794
+mem_heap_B=1758775
+mem_heap_extra_B=150825
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=1833
+mem_heap_B=1758775
+mem_heap_extra_B=150825
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=1842
+mem_heap_B=1816554
+mem_heap_extra_B=150894
+mem_stacks_B=0
+heap_tree=peak
+n13: 1816554 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 589824 0x492D883: opal_hotel_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 589824 0x488D1F0: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+   n1: 589824 0x51C99E5: ???
+    n1: 589824 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 589824 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 589824 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 589824 0x4A3B0B2: (below main) (libc-start.c:308)
+ n0: 309286 in 672 places, all below massif's threshold (1.00%)
+ n5: 196128 0x5243531: ???
+  n1: 66272 0x52CC2B9: ???
+   n1: 66272 0x52A807C: ???
+    n1: 66272 0x52883BD: ???
+     n1: 66272 0x52390E8: ???
+      n1: 66272 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+       n1: 66272 0x51C99E5: ???
+        n1: 66272 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+         n1: 66272 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+          n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+           n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 34624 0x5394BEE: ???
+   n1: 34624 0x5395958: ???
+    n0: 34624 in 2 places, all below massif's threshold (1.00%)
+  n1: 34624 0x5394C4E: ???
+   n1: 34624 0x5395958: ???
+    n0: 34624 in 2 places, all below massif's threshold (1.00%)
+  n1: 34624 0x5394CAE: ???
+   n1: 34624 0x5395958: ???
+    n0: 34624 in 2 places, all below massif's threshold (1.00%)
+  n0: 25984 in 2 places, all below massif's threshold (1.00%)
+ n3: 187456 0x492C801: opal_hash_table_init2 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 66272 0x4958E91: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+      n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 66272 0x495C899: mca_base_pvar_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4958EBD: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n0: 54912 in 7 places, all below massif's threshold (1.00%)
+ n2: 88872 0x495905D: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 83832 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 44520 0x495B131: mca_base_component_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 44520 in 85 places, all below massif's threshold (1.00%)
+   n0: 39312 in 176 places, all below massif's threshold (1.00%)
+  n0: 5040 in 1 place, below massif's threshold (1.00%)
+ n2: 79231 0x4AB650E: strdup (strdup.c:42)
+  n0: 50885 in 366 places, all below massif's threshold (1.00%)
+  n2: 28346 0x49590F8: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 25074 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 25074 in 175 places, all below massif's threshold (1.00%)
+   n0: 3272 in 1 place, below massif's threshold (1.00%)
+ n1: 73728 0x5243F52: ???
+  n1: 73728 0x52A82A9: ???
+   n1: 73728 0x52883BD: ???
+    n1: 73728 0x52390E8: ???
+     n1: 73728 0x488D44C: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 73728 0x51C99E5: ???
+       n1: 73728 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 73728 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+         n1: 73728 0x1093A2: orterun (in /usr/bin/orterun)
+          n0: 73728 0x4A3B0B2: (below main) (libc-start.c:308)
+ n1: 65632 0x4AF5098: __alloc_dir (opendir.c:118)
+  n1: 65632 0x4AF5098: opendir_tail (opendir.c:69)
+   n2: 65632 0x4AF5098: opendir (opendir.c:92)
+    n2: 65632 0x52511EF: ???
+     n1: 32816 0x52513C0: ???
+      n1: 32816 0x5252E3E: ???
+       n1: 32816 0x528AE5B: ???
+        n1: 32816 0x528C125: ???
+         n1: 32816 0x52EC041: ???
+          n1: 32816 0x49800B2: event_process_active_single_queue (event.c:1370)
+           n1: 32816 0x49800B2: event_process_active (event.c:1440)
+            n1: 32816 0x49800B2: opal_libevent2022_event_base_loop (event.c:1644)
+             n1: 32816 0x52A9495: ???
+              n1: 32816 0x4C14608: start_thread (pthread_create.c:477)
+               n0: 32816 0x4B36292: clone (clone.S:95)
+     n1: 32816 0x5252E3E: ???
+      n1: 32816 0x528AE5B: ???
+       n1: 32816 0x528C125: ???
+        n1: 32816 0x52EC041: ???
+         n1: 32816 0x49800B2: event_process_active_single_queue (event.c:1370)
+          n1: 32816 0x49800B2: event_process_active (event.c:1440)
+           n1: 32816 0x49800B2: opal_libevent2022_event_base_loop (event.c:1644)
+            n1: 32816 0x52A9495: ???
+             n1: 32816 0x4C14608: start_thread (pthread_create.c:477)
+              n0: 32816 0x4B36292: clone (clone.S:95)
+    n0: 0 in 3 places, all below massif's threshold (1.00%)
+ n1: 65550 0x400D273: _dl_new_object (dl-object.c:89)
+  n1: 65550 0x4006E96: _dl_map_object_from_fd (dl-load.c:997)
+   n2: 65550 0x400A61A: _dl_map_object (dl-load.c:2236)
+    n1: 63145 0x4015D36: dl_open_worker (dl-open.c:513)
+     n1: 63145 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+      n2: 63145 0x40155F9: _dl_open (dl-open.c:837)
+       n1: 61943 0x4C3134B: dlopen_doit (dlopen.c:66)
+        n1: 61943 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 61943 0x4B77982: _dl_catch_error (dl-error-skeleton.c:227)
+          n1: 61943 0x4C31B58: _dlerror_run (dlerror.c:170)
+           n2: 61943 0x4C313D9: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+            n1: 37207 0x497BC23: dlopen_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+             n1: 37207 0x49565C3: mca_base_component_repository_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+              n1: 37207 0x495559A: mca_base_component_find (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+               n1: 37207 0x496106D: mca_base_framework_components_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                n1: 37207 0x4961555: mca_base_framework_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                 n1: 37207 0x49615B3: mca_base_framework_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                  n0: 37207 in 20 places, all below massif's threshold (1.00%)
+            n1: 24736 0x52E0C04: ???
+             n1: 24736 0x52C793D: ???
+              n1: 24736 0x52C699A: ???
+               n1: 24736 0x52C85CD: ???
+                n1: 24736 0x52C8DED: ???
+                 n1: 24736 0x52C8E53: ???
+                  n0: 24736 in 9 places, all below massif's threshold (1.00%)
+       n0: 1202 in 1 place, below massif's threshold (1.00%)
+    n0: 2405 in 1 place, below massif's threshold (1.00%)
+ n1: 65536 0x492D898: opal_hotel_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 65536 0x488D1F0: pmix_server_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+   n1: 65536 0x51C99E5: ???
+    n1: 65536 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 65536 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 65536 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 65536 0x4A3B0B2: (below main) (libc-start.c:308)
+ n2: 37520 0x49604DF: group_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 28560 0x4959012: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 27160 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 27160 in 14 places, all below massif's threshold (1.00%)
+   n0: 1400 in 1 place, below massif's threshold (1.00%)
+  n0: 8960 in 3 places, all below massif's threshold (1.00%)
+ n1: 29063 0x4958C11: mca_base_var_generate_full_name4 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n0: 29063 in 6 places, all below massif's threshold (1.00%)
+ n2: 28728 0x52CC641: ???
+  n1: 27888 0x52CD07A: ???
+   n0: 27888 in 52 places, all below massif's threshold (1.00%)
+  n0: 840 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=68
+#-----------
+time=1854
+mem_heap_B=1751181
+mem_heap_extra_B=151035
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=1880
+mem_heap_B=1750797
+mem_heap_extra_B=151019
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=1891
+mem_heap_B=1738108
+mem_heap_extra_B=150868
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=1902
+mem_heap_B=1667433
+mem_heap_extra_B=148079
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=1913
+mem_heap_B=1627130
+mem_heap_extra_B=139334
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=1924
+mem_heap_B=1615093
+mem_heap_extra_B=137731
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=1935
+mem_heap_B=1581829
+mem_heap_extra_B=132475
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=1946
+mem_heap_B=1447233
+mem_heap_extra_B=110295
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=1958
+mem_heap_B=574607
+mem_heap_extra_B=102553
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=1969
+mem_heap_B=545407
+mem_heap_extra_B=101217
+mem_stacks_B=0
+heap_tree=detailed
+n11: 545407 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n7: 178784 0x492C801: opal_hash_table_init2 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 66272 0x4958E91: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+      n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 66272 0x495C899: mca_base_pvar_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 66272 0x4958EBD: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 66272 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 66272 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 66272 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 66272 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 17312 0x495FEA1: mca_base_var_group_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 17312 0x4958EB4: mca_base_var_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 17312 0x4936171: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 17312 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 17312 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 17312 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 8672 0x48B0799: orte_oob_base_open (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+   n1: 8672 0x4961628: mca_base_framework_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 8672 0x51C9A24: ???
+     n1: 8672 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 8672 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+       n1: 8672 0x1093A2: orterun (in /usr/bin/orterun)
+        n0: 8672 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 8672 0x4956121: mca_base_component_repository_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 8672 0x4957908: mca_base_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 8672 0x4936274: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 8672 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+      n1: 8672 0x1093A2: orterun (in /usr/bin/orterun)
+       n0: 8672 0x4A3B0B2: (below main) (libc-start.c:308)
+  n1: 8672 0x51C9CC1: ???
+   n1: 8672 0x48D718B: orte_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+    n1: 8672 0x488792D: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+     n1: 8672 0x1093A2: orterun (in /usr/bin/orterun)
+      n0: 8672 0x4A3B0B2: (below main) (libc-start.c:308)
+  n0: 2912 in 3 places, all below massif's threshold (1.00%)
+ n2: 88872 0x495905D: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 83832 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n4: 44520 0x495B131: mca_base_component_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 13776 in 82 places, all below massif's threshold (1.00%)
+    n1: 10248 0x4961118: mca_base_framework_components_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 10248 0x4961555: mca_base_framework_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+      n1: 10248 0x49615B3: mca_base_framework_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+       n0: 10248 in 26 places, all below massif's threshold (1.00%)
+    n1: 10248 0x4961143: mca_base_framework_components_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 10248 0x4961555: mca_base_framework_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+      n1: 10248 0x49615B3: mca_base_framework_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+       n0: 10248 in 26 places, all below massif's threshold (1.00%)
+    n1: 10248 0x496116E: mca_base_framework_components_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 10248 0x4961555: mca_base_framework_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+      n1: 10248 0x49615B3: mca_base_framework_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+       n0: 10248 in 26 places, all below massif's threshold (1.00%)
+   n0: 39312 in 176 places, all below massif's threshold (1.00%)
+  n0: 5040 in 1 place, below massif's threshold (1.00%)
+ n0: 84584 in 690 places, all below massif's threshold (1.00%)
+ n3: 47997 0x4AB650E: strdup (strdup.c:42)
+  n2: 28346 0x49590F8: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 25074 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 25074 in 175 places, all below massif's threshold (1.00%)
+   n0: 3272 in 1 place, below massif's threshold (1.00%)
+  n0: 12582 in 366 places, all below massif's threshold (1.00%)
+  n2: 7069 0x4959109: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 6705 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 6705 in 176 places, all below massif's threshold (1.00%)
+   n0: 364 in 1 place, below massif's threshold (1.00%)
+ n3: 37520 0x49604DF: group_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 28560 0x4959012: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n3: 27160 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n2: 16240 0x495B131: mca_base_component_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 8400 0x4961118: mca_base_framework_components_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+      n1: 8400 0x4961555: mca_base_framework_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+       n1: 8400 0x49615B3: mca_base_framework_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+        n0: 8400 in 15 places, all below massif's threshold (1.00%)
+     n0: 7840 in 28 places, all below massif's threshold (1.00%)
+    n1: 7560 0x495B180: mca_base_framework_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 7560 0x4961502: mca_base_framework_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+      n1: 7560 0x49615B3: mca_base_framework_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+       n0: 7560 in 27 places, all below massif's threshold (1.00%)
+    n0: 3360 in 12 places, all below massif's threshold (1.00%)
+   n0: 1400 in 1 place, below massif's threshold (1.00%)
+  n1: 7280 0x4961442: mca_base_framework_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 7280 0x49615B3: mca_base_framework_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n0: 7280 in 26 places, all below massif's threshold (1.00%)
+  n0: 1680 in 2 places, all below massif's threshold (1.00%)
+ n3: 29063 0x4958C11: mca_base_var_generate_full_name4 (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 14866 0x4959152: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n2: 14123 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 8218 0x495B131: mca_base_component_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n0: 8218 in 85 places, all below massif's threshold (1.00%)
+    n0: 5905 in 176 places, all below massif's threshold (1.00%)
+   n0: 743 in 1 place, below massif's threshold (1.00%)
+  n2: 12221 0x495912C: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n2: 11628 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 6893 0x495B131: mca_base_component_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n0: 6893 in 85 places, all below massif's threshold (1.00%)
+    n0: 4735 in 176 places, all below massif's threshold (1.00%)
+   n0: 593 in 1 place, below massif's threshold (1.00%)
+  n0: 1976 in 4 places, all below massif's threshold (1.00%)
+ n1: 25959 0x400D273: _dl_new_object (dl-object.c:89)
+  n1: 25959 0x4006E96: _dl_map_object_from_fd (dl-load.c:997)
+   n2: 25959 0x400A61A: _dl_map_object (dl-load.c:2236)
+    n1: 24764 0x4015D36: dl_open_worker (dl-open.c:513)
+     n1: 24764 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+      n2: 24764 0x40155F9: _dl_open (dl-open.c:837)
+       n1: 23562 0x4C3134B: dlopen_doit (dlopen.c:66)
+        n1: 23562 0x4B778B7: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 23562 0x4B77982: _dl_catch_error (dl-error-skeleton.c:227)
+          n1: 23562 0x4C31B58: _dlerror_run (dlerror.c:170)
+           n2: 23562 0x4C313D9: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+            n1: 23562 0x497BC23: dlopen_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+             n1: 23562 0x49565C3: mca_base_component_repository_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+              n1: 23562 0x495559A: mca_base_component_find (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+               n1: 23562 0x496106D: mca_base_framework_components_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                n1: 23562 0x4961555: mca_base_framework_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                 n1: 23562 0x49615B3: mca_base_framework_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+                  n0: 23562 in 20 places, all below massif's threshold (1.00%)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 1202 in 1 place, below massif's threshold (1.00%)
+    n0: 1195 in 1 place, below massif's threshold (1.00%)
+ n1: 17776 0x4955C6F: process_repository_item (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 17776 0x497BA7A: dlopen_foreachfile (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n1: 17776 0x4955FF3: mca_base_component_repository_add (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 17776 0x4956137: mca_base_component_repository_init (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n1: 17776 0x4957908: mca_base_open (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+      n1: 17776 0x4936274: opal_init_util (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+       n1: 17776 0x488720C: orte_submit_init (in /home/davide/opt/openmpi/lib/libopen-rte.so.40.30.1)
+        n1: 17776 0x1093A2: orterun (in /usr/bin/orterun)
+         n0: 17776 0x4A3B0B2: (below main) (libc-start.c:308)
+ n2: 13716 0x492CD9D: opal_hash_table_set_value_ptr (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n2: 11692 0x49591F7: register_variable (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n2: 11129 0x495B0EA: mca_base_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+    n1: 6628 0x495B131: mca_base_component_var_register (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+     n0: 6628 in 85 places, all below massif's threshold (1.00%)
+    n0: 4501 in 176 places, all below massif's threshold (1.00%)
+   n0: 563 in 1 place, below massif's threshold (1.00%)
+  n0: 2024 in 2 places, all below massif's threshold (1.00%)
+ n1: 11904 0x49BE201: opal_hwloc201_hwloc_alloc_setup_object (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n0: 11904 in 10 places, all below massif's threshold (1.00%)
+ n2: 9232 0x4930459: grow_table (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+  n1: 7192 0x493075C: opal_pointer_array_add (in /home/davide/opt/openmpi/lib/libopen-pal.so.40.30.1)
+   n0: 7192 in 4 places, all below massif's threshold (1.00%)
+  n0: 2040 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=78
+#-----------
+time=1980
+mem_heap_B=516790
+mem_heap_extra_B=99466
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=1991
+mem_heap_B=481091
+mem_heap_extra_B=96725
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=2002
+mem_heap_B=245264
+mem_heap_extra_B=25584
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=2015
+mem_heap_B=16190
+mem_heap_extra_B=1682
+mem_stacks_B=0
+heap_tree=empty
