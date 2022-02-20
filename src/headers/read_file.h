@@ -5,9 +5,8 @@
 
 using namespace std;
 
-/**
-* Read the full content of a text-file and return it as type: 'string'.
-*/
+
+//Read the full content of a text-file and return it as type: 'string'.
 //START READFILE
 string read_file(string pathname){
     std::ifstream t(pathname);

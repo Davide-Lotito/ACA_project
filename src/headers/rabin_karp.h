@@ -44,7 +44,7 @@ int search(char txt[] ,char pat[])
         // check for characters on by one
         if ( p == t )
         {
-            /* Check for characters one by one */
+            // Check for characters one by one
             for (j = 0; j < M; j++)
             {
                 if (txt[i+j] != pat[j])

@@ -14,9 +14,7 @@
 
 
 int main (int argc, char *argv[]) {
-
-	
-
+	//START COMMON
 	MPI_Status status;
 	int myrank, size, retVal;	
 
@@ -25,10 +23,8 @@ int main (int argc, char *argv[]) {
 	MPI_Comm_size(MPI_COMM_WORLD, &size);
 
 	hash<string> hasher; //only for debug
-	
-	/*
-	Master's Part
-	*/
+	//END COMMON
+
 	//START MASTER
 	if (myrank == 0){ 
 
@@ -73,11 +69,6 @@ int main (int argc, char *argv[]) {
 		cout<<"Found: "<<results<<" occurences"<<" in "<<millisecs<<" milliseconds."<<endl;
 	}
 	
-
-
-	/*
-	Slaves' Part
-	*/
 	//START SLAVE
 	if(myrank != 0){
 
@@ -121,11 +112,13 @@ int main (int argc, char *argv[]) {
 		cout<<"Slave of rank: "<<myrank<<" subtext hash: "<<hasher(text)<<" length of the string: "<<strlen(text)<<endl;
 
 		// sends back the results to the master
-		//END SLAVE
 		retVal = MPI_Send(&result, 1, MPI_INT, 0, TAG, MPI_COMM_WORLD);
 		free(buf);
+		//END SLAVE
+		cout<<"";
 	}
-	
+	//START FINALCOM
 	MPI_Finalize();
+	//END FINALCOM
     return 0;
 }
