@@ -19,7 +19,7 @@ All the explanations on the project, the ideas, the topics are well described (w
 
 
 ## Other useful links and resources:
-* <a href="https://en.wikipedia.org/wiki/Genome">List of Genomoes</a>
+* <a href="https://en.wikipedia.org/wiki/Genome">List of Genomes</a>
 * <a href="https://www.open-mpi.org/doc/v4.1/">Open MPI Documentation</a>
 * <a href="https://drive.google.com/drive/folders/1i3BT1cYYn8K2EbuV4GppJf4Ieq0yAkxB?usp=sharing">Drive</a>
 * <a href="https://www.ncbi.nlm.nih.gov/data-hub/taxonomy/562/">Escherichia coli</a>
