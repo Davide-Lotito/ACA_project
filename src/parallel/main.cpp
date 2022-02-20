@@ -123,7 +123,7 @@ int main (int argc, char *argv[]) {
 		// sends back the results to the master
 		//END SLAVE
 		retVal = MPI_Send(&result, 1, MPI_INT, 0, TAG, MPI_COMM_WORLD);
-		
+		free(buf);
 	}
 	
 	MPI_Finalize();
